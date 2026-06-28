@@ -4,15 +4,25 @@ title: Largest Element in an Array
 difficulty: Easy
 topic: Arrays
 pattern: Traversal
+
 status: Solved
+
+confidence: 0
+solvedOn:
+lastRevision:
+nextRevision:
+
+tags:
+
+  - array
+
+  - traversal
+
+
 links:
-  striver: https://takeuforward.org/plus/dsa/problems/largest-element?source=strivers-a2z-dsa-track
+  striver: ...
   leetcode: None
-  gfg: https://www.geeksforgeeks.org/problems/largest-element-in-array4009/1
-solvedOn: 2026-06-28
-lastRevision: 2026-06-28
-nextRevision: 2026-06-29
-confidence: 1
+  gfg: ...
 ---
 
 # Largest Element in an Array
@@ -20,13 +30,13 @@ confidence: 1
 ## 🔗 Links
 
 
-- **Striver:** https://takeuforward.org/plus/dsa/problems/largest-element?source=strivers-a2z-dsa-track
+- **Striver:** ...
 
 
 
 
 
-- **GeeksforGeeks:** https://www.geeksforgeeks.org/problems/largest-element-in-array4009/1
+- **GeeksforGeeks:** ...
 
 
 ---
@@ -56,8 +66,6 @@ Find the largest element present in the array.
 ---
 
 ## 💻 My Code
-
-
 
 ```cpp
 

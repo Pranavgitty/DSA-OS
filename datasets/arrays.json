@@ -1,0 +1,22 @@
+{
+  "topic": "Arrays",
+  "problems": [
+    {
+      "id": "A01",
+      "title": "Largest Element in an Array",
+      "difficulty": "Easy",
+      "topic": "Arrays",
+      "pattern": "Traversal",
+      "summary": "Find the largest element present in the array.",
+      "tags": [
+        "array",
+        "traversal"
+      ],
+      "links": {
+        "striver": "...",
+        "leetcode": null,
+        "gfg": "..."
+      }
+    }
+  ]
+}
