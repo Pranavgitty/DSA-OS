@@ -5,28 +5,42 @@ from jinja2 import Template
 ROOT = Path(__file__).parent
 PROJECT_ROOT = ROOT.parent
 
-DATASET_DIR = PROJECT_ROOT / "dataset"
+DATASET_DIR = ROOT / "dataset"
 
 TEMPLATE_FILE = ROOT / "templates" / "problem.md.j2"
 
 PROGRESS_FILE = ROOT / "data" / "progress.json"
 
-TOPIC_FOLDERS = {
-    "Arrays": "01 Arrays",
-    "Binary Search": "02 Binary Search",
-    "Strings": "03 Strings",
-    "Linked List": "04 Linked List",
-    "Recursion": "05 Recursion",
-    "Bit Manipulation": "06 Bit Manipulation",
-    "Stack & Queue": "07 Stack & Queue",
-    "Sliding Window": "08 Sliding Window",
-    "Trees": "09 Trees",
-    "BST": "10 BST",
-    "Heap": "11 Heap",
-    "Greedy": "12 Greedy",
-    "Graphs": "13 Graphs",
-    "Trie": "14 Trie",
-    "Dynamic Programming": "15 Dynamic Programming",
+TOPIC_MAP = {
+    "arrays": "01 Arrays",
+
+    "binary-search-1d-2d-arrays-search-space": "02 Binary Search",
+
+    "strings-basic-medium": "03 Strings",
+    "strings-hard": "03 Strings",
+
+    "linked-list": "04 Linked List",
+    "recursion": "05 Recursion",
+
+    "bit-manipulation-concepts-and-problems": "06 Bit Manipulation",
+
+    "stack-and-queues-learning-pre-in-post-fix-monotonic-stack-implementation": "07 Stack & Queue",
+
+    "sliding-window-and-two-pointer-combined-problems": "08 Sliding Window",
+
+    "binary-trees-traversals-medium-and-hard-problems": "09 Trees",
+
+    "binary-search-trees-concept-and-problems": "10 BST",
+
+    "heaps-learning-medium-hard-problems": "11 Heap",
+
+    "greedy-algorithms-easy-mediumhard": "12 Greedy",
+
+    "graphs-concepts-and-problems": "13 Graphs",
+
+    "tries": "14 Trie",
+
+    "dynamic-programming-patterns-and-problems": "15 Dynamic Programming",
 }
 
 
@@ -45,16 +59,16 @@ def generate_topic(dataset_file, template, progress):
     with open(dataset_file, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    topic = data["topic"]
+    dataset_name = dataset_file.stem
 
-    if topic not in TOPIC_FOLDERS:
-        print(f"Skipping unknown topic: {topic}")
+    if dataset_name not in TOPIC_MAP:
+        print(f"Skipping unknown topic: {dataset_name}")
         return
 
     output_dir = (
         PROJECT_ROOT
         / "02 Striver A2Z Sheet"
-        / TOPIC_FOLDERS[topic]
+        / TOPIC_MAP[dataset_name]
     )
 
     for problem in data["problems"]:
@@ -63,7 +77,20 @@ def generate_topic(dataset_file, template, progress):
 
         difficulty_folder.mkdir(parents=True, exist_ok=True)
 
-        filename = f'{problem["id"]} {problem["title"]}.md'
+        safe_title = (
+            problem["title"]
+            .replace("/", " or ")
+            .replace("\\", " ")
+            .replace(":", " -")
+            .replace("*", "")
+            .replace("?", "")
+            .replace('"', "")
+            .replace("<", "")
+            .replace(">", "")
+            .replace("|", "")
+)
+
+        filename = f'{problem["id"]} {safe_title}.md'
 
         status = progress.get(problem["id"], {})
 
@@ -72,11 +99,13 @@ def generate_topic(dataset_file, template, progress):
             solved=status.get("solved", False)
         )
 
-        with open(
-            difficulty_folder / filename,
-            "w",
-            encoding="utf-8"
-        ) as f:
+        file_path = difficulty_folder / filename
+
+        if file_path.exists():
+            print(f"Skipped {filename}")
+            continue
+
+        with open(file_path, "w", encoding="utf-8") as f:
             f.write(rendered)
 
         print(f"Generated {filename}")
@@ -89,6 +118,7 @@ def generate():
     progress = load_progress()
 
     for dataset_file in sorted(DATASET_DIR.glob("*.json")):
+        print(dataset_file)
 
         if dataset_file.name == "schema.json":
             continue
