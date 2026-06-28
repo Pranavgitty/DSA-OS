@@ -12,3 +12,16 @@
 
 # Windows
 Thumbs.db
+
+# Obsidian user config
+.obsidian/workspace.json
+.obsidian/community-plugins.json
+
+# Plugin build artifacts
+plugin/node_modules/
+plugin/main.js
+
+# Third-party Obsidian plugins
+.obsidian/plugins/
+
+# But keep our own plugin (which lives in /plugin)
