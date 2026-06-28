@@ -1,3 +1,5 @@
+import { VaultService } from "../services/VaultService";
+
 import {
 	App,
 	ItemView,
@@ -29,6 +31,12 @@ export class DSAView extends ItemView {
 		const container = this.containerEl.children[1];
 
 		container.empty();
+		
+		const vault = new VaultService(this.app);
+
+		const progress = vault.getProgress();
+
+		console.log(progress);
 
 		container.createEl("h2", {
 			text: "🧠 DSA-OS",
@@ -53,7 +61,11 @@ export class DSAView extends ItemView {
 		});
 
 		container.createEl("p", {
-			text: "Coming Soon...",
+			text: `${progress.solved} / ${progress.total} solved`,
+		});
+
+		container.createEl("p", {
+			text: `${progress.percentage}% Complete`,
 		});
 	}
 
