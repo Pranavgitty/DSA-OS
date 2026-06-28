@@ -1,0 +1,10 @@
+{
+	"id": "dsa-os",
+	"name": "DSA-OS",
+	"version": "0.0.1",
+	"minAppVersion": "1.5.0",
+	"description": "A complete DSA operating system for Obsidian.",
+	"author": "Pranavgitty",
+	"authorUrl": "https://github.com/Pranavgitty",
+	"isDesktopOnly": false
+}
