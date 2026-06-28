@@ -1,0 +1,17 @@
+{
+  "topic": "Arrays",
+  "problems": [
+    {
+      "id": "A01",
+      "title": "Largest Element in an Array",
+      "difficulty": "Easy",
+      "pattern": "Traversal",
+      "links": {
+        "striver": "https://takeuforward.org/plus/dsa/problems/largest-element?source=strivers-a2z-dsa-track",
+        "leetcode": null,
+        "gfg": "https://www.geeksforgeeks.org/problems/largest-element-in-array4009/1"
+      },
+      "summary": "Find the largest element present in the array."
+    }
+  ]
+}
