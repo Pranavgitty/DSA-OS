@@ -2,7 +2,7 @@
   "topic": "Strings",
   "problems": [
     {
-      "id": "X01",
+      "id": "SH01",
       "title": "Minimum number of bracket reversals to make an expression balanced",
       "difficulty": "Hard",
       "pattern": "Hard Problems",
@@ -15,7 +15,7 @@
       }
     },
     {
-      "id": "X02",
+      "id": "SH02",
       "title": "Count and say",
       "difficulty": "Hard",
       "pattern": "Hard Problems",
@@ -28,7 +28,7 @@
       }
     },
     {
-      "id": "X03",
+      "id": "SH03",
       "title": "Hashing In Strings | Theory",
       "difficulty": "Easy",
       "pattern": "Hard Problems",
@@ -41,7 +41,7 @@
       }
     },
     {
-      "id": "X04",
+      "id": "SH04",
       "title": "Rabin Karp Algorithm",
       "difficulty": "Hard",
       "pattern": "Hard Problems",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "X05",
+      "id": "SH05",
       "title": "Z function",
       "difficulty": "Hard",
       "pattern": "Hard Problems",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "X06",
+      "id": "SH06",
       "title": "KMP Algorithm or LPS array",
       "difficulty": "Hard",
       "pattern": "Hard Problems",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "X07",
+      "id": "SH07",
       "title": "Shortest Palindrome",
       "difficulty": "Hard",
       "pattern": "Hard Problems",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "X08",
+      "id": "SH08",
       "title": "Longest happy prefix",
       "difficulty": "Hard",
       "pattern": "Hard Problems",
@@ -106,7 +106,7 @@
       }
     },
     {
-      "id": "X09",
+      "id": "SH09",
       "title": "Count Palindromic Subsequences",
       "difficulty": "Medium",
       "pattern": "Hard Problems",

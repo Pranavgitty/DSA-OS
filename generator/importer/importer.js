@@ -70,6 +70,44 @@ console.log("Total Sections:", sections.length);
 
 let totalProblems = 0;
 
+const FILE_MAP = {
+    "Solve Problems on Arrays [Easy -> Medium -> Hard]": "arrays",
+    "Binary Search [1D, 2D Arrays, Search Space]": "binary-search",
+    "Strings [Basic and Medium]": "strings-basic-medium",
+    "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]": "linked-list",
+    "Recursion [PatternWise]": "recursion",
+    "Bit Manipulation [Concepts & Problems]": "bit-manipulation",
+    "Stack and Queues [Learning, Pre-In-Post-fix, Monotonic Stack, Implementation]": "stack-queue",
+    "Sliding Window & Two Pointer Combined Problems": "sliding-window",
+    "Heaps [Learning, Medium, Hard Problems]": "heaps",
+    "Greedy Algorithms [Easy, Medium/Hard]": "greedy",
+    "Binary Trees [Traversals, Medium and Hard Problems]": "binary-trees",
+    "Binary Search Trees [Concept and Problems]": "bst",
+    "Graphs [Concepts & Problems]": "graphs",
+    "Dynamic Programming [Patterns and Problems]": "dynamic-programming",
+    "Tries": "tries",
+    "Strings": "strings-hard"
+};
+
+const ID_PREFIX = {
+    "arrays": "A",
+    "binary-search": "BS",
+    "strings-basic-medium": "S",
+    "linked-list": "LL",
+    "recursion": "R",
+    "bit-manipulation": "BM",
+    "stack-queue": "SQ",
+    "sliding-window": "SW",
+    "heaps": "H",
+    "greedy": "G",
+    "binary-trees": "BT",
+    "bst": "BST",
+    "graphs": "GR",
+    "dynamic-programming": "DP",
+    "tries": "TR",
+    "strings-hard": "SH"
+};
+
 for (const section of sections) {
 
     const dataset = {
@@ -79,13 +117,15 @@ for (const section of sections) {
 
     let counter = 1;
 
+    const key = FILE_MAP[section.category_name] || slugify(section.category_name);
+    
     for (const sub of section.subcategories) {
 
         for (const problem of sub.problems) {
 
             dataset.problems.push({
 
-                id: `${slugify(section.category_name).charAt(0).toUpperCase()}${String(counter).padStart(2, "0")}`,
+                id: `${ID_PREFIX[key] || "X"}${String(counter).padStart(2, "0")}`,
 
                 title: problem.problem_name,
 
@@ -110,7 +150,7 @@ for (const section of sections) {
 
     }
 
-    const filename = `${slugify(section.category_name)}.json`;
+    const filename = `${FILE_MAP[section.category_name] || slugify(section.category_name)}.json`;
 
     fs.writeFileSync(
         path.join(OUTPUT, filename),

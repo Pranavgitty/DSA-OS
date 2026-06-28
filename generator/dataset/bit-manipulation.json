@@ -1,0 +1,239 @@
+{
+  "topic": "Bit Manipulation [Concepts & Problems]",
+  "problems": [
+    {
+      "id": "BM01",
+      "title": "Introduction to Bits and Tricks",
+      "difficulty": "Easy",
+      "pattern": "Learn Bit Manipulation",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/introduction-to-bit-manipulation-theory",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/qQd-ViW7bfk?si=QtdNaRhHmZb08Mr8"
+      }
+    },
+    {
+      "id": "BM02",
+      "title": "Check if the i-th bit is Set or Not",
+      "difficulty": "Easy",
+      "pattern": "Learn Bit Manipulation",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/check-if-the-i-th-bit-is-set-or-not",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/nttpF8kwgd4?si=x9o8PsYaA2XVZ9rV"
+      }
+    },
+    {
+      "id": "BM03",
+      "title": "Check if a Number is Odd or Not",
+      "difficulty": "Easy",
+      "pattern": "Learn Bit Manipulation",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/check-if-a-number-is-odd-or-not",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/nttpF8kwgd4?si=x9o8PsYaA2XVZ9rV"
+      }
+    },
+    {
+      "id": "BM04",
+      "title": "Check if a Number is Power of 2 or Not",
+      "difficulty": "Easy",
+      "pattern": "Learn Bit Manipulation",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/check-if-a-number-is-power-of-2-or-not",
+        "leetcode": "https://leetcode.com/problems/power-of-two/",
+        "gfg": "",
+        "youtube": "https://youtu.be/nttpF8kwgd4?si=x9o8PsYaA2XVZ9rV"
+      }
+    },
+    {
+      "id": "BM05",
+      "title": "Count the Number of Set Bits",
+      "difficulty": "Easy",
+      "pattern": "Learn Bit Manipulation",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/count-the-number-of-set-bits",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/nttpF8kwgd4?si=x9o8PsYaA2XVZ9rV"
+      }
+    },
+    {
+      "id": "BM06",
+      "title": "Set/Unset the rightmost unset bit",
+      "difficulty": "Easy",
+      "pattern": "Learn Bit Manipulation",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/set-the-rightmost-bit",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/nttpF8kwgd4?si=x9o8PsYaA2XVZ9rV"
+      }
+    },
+    {
+      "id": "BM07",
+      "title": "Swap Two Numbers",
+      "difficulty": "Easy",
+      "pattern": "Learn Bit Manipulation",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/swap-two-numbers",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/nttpF8kwgd4?si=x9o8PsYaA2XVZ9rV"
+      }
+    },
+    {
+      "id": "BM08",
+      "title": "Divide two numbers without multiplication and division",
+      "difficulty": "Medium",
+      "pattern": "Learn Bit Manipulation",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/divide-two-integers-without-using-multiplication-division-and-mod-operator",
+        "leetcode": "https://leetcode.com/problems/divide-two-integers/",
+        "gfg": "",
+        "youtube": "https://youtu.be/pBD4B1tzgVc?si=G9c5pEE-RrzeU6sz"
+      }
+    },
+    {
+      "id": "BM09",
+      "title": "Minimum Bit Flips to Convert Number",
+      "difficulty": "Medium",
+      "pattern": "Interview Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/count-number-of-bits-to-be-flipped-to-convert-a-to-b",
+        "leetcode": "https://leetcode.com/problems/minimum-bit-flips-to-convert-number/",
+        "gfg": "",
+        "youtube": "https://youtu.be/OOdrmcfZXd8?si=rnkRVz1UiVBKWC69"
+      }
+    },
+    {
+      "id": "BM10",
+      "title": "Single Number - I",
+      "difficulty": "Medium",
+      "pattern": "Interview Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/arrays/find-the-number-that-appears-once-and-the-other-numbers-twice/",
+        "leetcode": "https://leetcode.com/problems/single-number/",
+        "gfg": "",
+        "youtube": "https://youtu.be/bYWLJb3vCWY?t=1369"
+      }
+    },
+    {
+      "id": "BM11",
+      "title": "Power Set Bit Manipulation",
+      "difficulty": "Medium",
+      "pattern": "Interview Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/bit-manipulation/power-set-bit-manipulation",
+        "leetcode": "https://leetcode.com/problems/subsets/",
+        "gfg": "",
+        "youtube": "https://youtu.be/LqKaUv1G3_I?si=UXU_T5OsHiokPRvP"
+      }
+    },
+    {
+      "id": "BM12",
+      "title": "XOR of numbers in a given range",
+      "difficulty": "Medium",
+      "pattern": "Interview Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/find-xor-of-numbers-from-l-to-r",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/WqGb7159h7Q?si=uGUEbNUUaIN_6Vvr"
+      }
+    },
+    {
+      "id": "BM13",
+      "title": "Single Number - III",
+      "difficulty": "Medium",
+      "pattern": "Interview Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/find-the-two-numbers-appearing-odd-number-of-times",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/UA5JnV1J2sI?si=VFBRJyb3boZvx_r1"
+      }
+    },
+    {
+      "id": "BM14",
+      "title": "Print Prime Factors of a Number",
+      "difficulty": "Hard",
+      "pattern": "Advanced Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/find-the-two-numbers-appearing-odd-number-of-times",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/LT7XhVdeRyg?si=6HkjQokJRPTFai21"
+      }
+    },
+    {
+      "id": "BM15",
+      "title": "Divisors of a Number",
+      "difficulty": "Easy",
+      "pattern": "Advanced Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/print-all-divisors-of-a-given-number/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/1xNbjMdbjug?t=1580"
+      }
+    },
+    {
+      "id": "BM16",
+      "title": "Count primes in range L to R",
+      "difficulty": "Hard",
+      "pattern": "Advanced Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/sieve-of-eratosthenes",
+        "leetcode": "https://leetcode.com/problems/count-primes/",
+        "gfg": "",
+        "youtube": "https://youtu.be/g5Fuxn_AvSk?si=fv6Q-Po7wrMW0a5n"
+      }
+    },
+    {
+      "id": "BM17",
+      "title": "Prime factorisation of a Number",
+      "difficulty": "Hard",
+      "pattern": "Advanced Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/find-the-two-numbers-appearing-odd-number-of-times",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/LT7XhVdeRyg?si=6HkjQokJRPTFai21"
+      }
+    },
+    {
+      "id": "BM18",
+      "title": "Pow(x,n)",
+      "difficulty": "Easy",
+      "pattern": "Advanced Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/implement-powxn-x-raised-to-the-power-n/",
+        "leetcode": "https://leetcode.com/problems/powx-n/",
+        "gfg": "",
+        "youtube": "https://youtu.be/l0YC3876qxg"
+      }
+    }
+  ]
+}

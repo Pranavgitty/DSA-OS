@@ -2,7 +2,7 @@
   "topic": "Learn the basics",
   "problems": [
     {
-      "id": "L01",
+      "id": "X01",
       "title": "Input Output",
       "difficulty": "Easy",
       "pattern": "Things to Know in C++/Java/Python or any language",
@@ -15,7 +15,7 @@
       }
     },
     {
-      "id": "L02",
+      "id": "X02",
       "title": "Cpp Basics",
       "difficulty": "Easy",
       "pattern": "Things to Know in C++/Java/Python or any language",
@@ -28,7 +28,7 @@
       }
     },
     {
-      "id": "L03",
+      "id": "X03",
       "title": "If ElseIf",
       "difficulty": "Easy",
       "pattern": "Things to Know in C++/Java/Python or any language",
@@ -41,7 +41,7 @@
       }
     },
     {
-      "id": "L04",
+      "id": "X04",
       "title": "Switch Case",
       "difficulty": "Easy",
       "pattern": "Things to Know in C++/Java/Python or any language",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "L05",
+      "id": "X05",
       "title": "What are arrays, strings?",
       "difficulty": "Easy",
       "pattern": "Things to Know in C++/Java/Python or any language",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "L06",
+      "id": "X06",
       "title": "For loops",
       "difficulty": "Easy",
       "pattern": "Things to Know in C++/Java/Python or any language",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "L07",
+      "id": "X07",
       "title": "While loops",
       "difficulty": "Easy",
       "pattern": "Things to Know in C++/Java/Python or any language",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "L08",
+      "id": "X08",
       "title": "Functions (Pass by Reference and Value)",
       "difficulty": "Easy",
       "pattern": "Things to Know in C++/Java/Python or any language",
@@ -106,7 +106,7 @@
       }
     },
     {
-      "id": "L09",
+      "id": "X09",
       "title": "Theory with examples",
       "difficulty": "Easy",
       "pattern": "Things to Know in C++/Java/Python or any language",
@@ -119,7 +119,7 @@
       }
     },
     {
-      "id": "L10",
+      "id": "X10",
       "title": "Easy and Medium",
       "difficulty": "Easy",
       "pattern": "Build-up Logical Thinking",
@@ -132,7 +132,7 @@
       }
     },
     {
-      "id": "L11",
+      "id": "X11",
       "title": "Hard",
       "difficulty": "Easy",
       "pattern": "Build-up Logical Thinking",
@@ -145,7 +145,7 @@
       }
     },
     {
-      "id": "L12",
+      "id": "X12",
       "title": "Pattern 1",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -158,7 +158,7 @@
       }
     },
     {
-      "id": "L13",
+      "id": "X13",
       "title": "Pattern 2",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -171,7 +171,7 @@
       }
     },
     {
-      "id": "L14",
+      "id": "X14",
       "title": "Pattern 3",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "L15",
+      "id": "X15",
       "title": "Pattern 4",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -197,7 +197,7 @@
       }
     },
     {
-      "id": "L16",
+      "id": "X16",
       "title": "Pattern 5",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -210,7 +210,7 @@
       }
     },
     {
-      "id": "L17",
+      "id": "X17",
       "title": "Pattern 6",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -223,7 +223,7 @@
       }
     },
     {
-      "id": "L18",
+      "id": "X18",
       "title": "Pattern 7",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -236,7 +236,7 @@
       }
     },
     {
-      "id": "L19",
+      "id": "X19",
       "title": "Pattern 8",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -249,7 +249,7 @@
       }
     },
     {
-      "id": "L20",
+      "id": "X20",
       "title": "Pattern 9",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -262,7 +262,7 @@
       }
     },
     {
-      "id": "L21",
+      "id": "X21",
       "title": "Pattern 10",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -275,7 +275,7 @@
       }
     },
     {
-      "id": "L22",
+      "id": "X22",
       "title": "Pattern 11",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -288,7 +288,7 @@
       }
     },
     {
-      "id": "L23",
+      "id": "X23",
       "title": "Pattern 12",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -301,7 +301,7 @@
       }
     },
     {
-      "id": "L24",
+      "id": "X24",
       "title": "Pattern 13",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -314,7 +314,7 @@
       }
     },
     {
-      "id": "L25",
+      "id": "X25",
       "title": "Pattern 14",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -327,7 +327,7 @@
       }
     },
     {
-      "id": "L26",
+      "id": "X26",
       "title": "Pattern 15",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -340,7 +340,7 @@
       }
     },
     {
-      "id": "L27",
+      "id": "X27",
       "title": "Pattern 16",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -353,7 +353,7 @@
       }
     },
     {
-      "id": "L28",
+      "id": "X28",
       "title": "Pattern 17",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -366,7 +366,7 @@
       }
     },
     {
-      "id": "L29",
+      "id": "X29",
       "title": "Pattern 18",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -379,7 +379,7 @@
       }
     },
     {
-      "id": "L30",
+      "id": "X30",
       "title": "Pattern 19",
       "difficulty": "Easy",
       "pattern": "Patterns",
@@ -392,7 +392,7 @@
       }
     },
     {
-      "id": "L31",
+      "id": "X31",
       "title": "Pattern 20",
       "difficulty": "Medium",
       "pattern": "Patterns",
@@ -405,7 +405,7 @@
       }
     },
     {
-      "id": "L32",
+      "id": "X32",
       "title": "Pattern 21",
       "difficulty": "Medium",
       "pattern": "Patterns",
@@ -418,7 +418,7 @@
       }
     },
     {
-      "id": "L33",
+      "id": "X33",
       "title": "Pattern 22",
       "difficulty": "Medium",
       "pattern": "Patterns",
@@ -431,7 +431,7 @@
       }
     },
     {
-      "id": "L34",
+      "id": "X34",
       "title": "STL",
       "difficulty": "Easy",
       "pattern": "Learn STL/Java-Collections or similar thing in your\n            language",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "L35",
+      "id": "X35",
       "title": "Java Collections",
       "difficulty": "Easy",
       "pattern": "Learn STL/Java-Collections or similar thing in your\n            language",
@@ -457,7 +457,7 @@
       }
     },
     {
-      "id": "L36",
+      "id": "X36",
       "title": "Count all Digits of a Number",
       "difficulty": "Easy",
       "pattern": "Know Basic Maths",
@@ -470,7 +470,7 @@
       }
     },
     {
-      "id": "L37",
+      "id": "X37",
       "title": "Reverse a number",
       "difficulty": "Easy",
       "pattern": "Know Basic Maths",
@@ -483,7 +483,7 @@
       }
     },
     {
-      "id": "L38",
+      "id": "X38",
       "title": "Palindrome Number",
       "difficulty": "Easy",
       "pattern": "Know Basic Maths",
@@ -496,7 +496,7 @@
       }
     },
     {
-      "id": "L39",
+      "id": "X39",
       "title": "GCD of Two Numbers",
       "difficulty": "Easy",
       "pattern": "Know Basic Maths",
@@ -509,7 +509,7 @@
       }
     },
     {
-      "id": "L40",
+      "id": "X40",
       "title": "Check if the Number is Armstrong",
       "difficulty": "Easy",
       "pattern": "Know Basic Maths",
@@ -522,7 +522,7 @@
       }
     },
     {
-      "id": "L41",
+      "id": "X41",
       "title": "Print all Divisors",
       "difficulty": "easy",
       "pattern": "Know Basic Maths",
@@ -535,7 +535,7 @@
       }
     },
     {
-      "id": "L42",
+      "id": "X42",
       "title": "Check for Prime Number",
       "difficulty": "Easy",
       "pattern": "Know Basic Maths",
@@ -548,7 +548,7 @@
       }
     },
     {
-      "id": "L43",
+      "id": "X43",
       "title": "Understand recursion by print something N times",
       "difficulty": "Easy",
       "pattern": "Learn Basic Recursion",
@@ -561,7 +561,7 @@
       }
     },
     {
-      "id": "L44",
+      "id": "X44",
       "title": "Print name N times using recursion",
       "difficulty": "Easy",
       "pattern": "Learn Basic Recursion",
@@ -574,7 +574,7 @@
       }
     },
     {
-      "id": "L45",
+      "id": "X45",
       "title": "Print 1 to N using Recursion",
       "difficulty": "Easy",
       "pattern": "Learn Basic Recursion",
@@ -587,7 +587,7 @@
       }
     },
     {
-      "id": "L46",
+      "id": "X46",
       "title": "Print N to 1 using Recursion",
       "difficulty": "Easy",
       "pattern": "Learn Basic Recursion",
@@ -600,7 +600,7 @@
       }
     },
     {
-      "id": "L47",
+      "id": "X47",
       "title": "Sum of First N Numbers",
       "difficulty": "Easy",
       "pattern": "Learn Basic Recursion",
@@ -613,7 +613,7 @@
       }
     },
     {
-      "id": "L48",
+      "id": "X48",
       "title": "Factorial of a given number",
       "difficulty": "Easy",
       "pattern": "Learn Basic Recursion",
@@ -626,7 +626,7 @@
       }
     },
     {
-      "id": "L49",
+      "id": "X49",
       "title": "Reverse an array",
       "difficulty": "Easy",
       "pattern": "Learn Basic Recursion",
@@ -639,7 +639,7 @@
       }
     },
     {
-      "id": "L50",
+      "id": "X50",
       "title": "Check if String is Palindrome or Not ",
       "difficulty": "Easy",
       "pattern": "Learn Basic Recursion",
@@ -652,7 +652,7 @@
       }
     },
     {
-      "id": "L51",
+      "id": "X51",
       "title": "Fibonacci Number",
       "difficulty": "Easy",
       "pattern": "Learn Basic Recursion",
@@ -665,7 +665,7 @@
       }
     },
     {
-      "id": "L52",
+      "id": "X52",
       "title": "Basic Hashing",
       "difficulty": "Easy",
       "pattern": "Learn Basic Hashing",
@@ -678,7 +678,7 @@
       }
     },
     {
-      "id": "L53",
+      "id": "X53",
       "title": "Counting Frequencies of Array Elements",
       "difficulty": "Easy",
       "pattern": "Learn Basic Hashing",
@@ -691,7 +691,7 @@
       }
     },
     {
-      "id": "L54",
+      "id": "X54",
       "title": "Highest Occurring Element in an Array",
       "difficulty": "Easy",
       "pattern": "Learn Basic Hashing",

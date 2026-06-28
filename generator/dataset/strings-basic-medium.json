@@ -1,0 +1,200 @@
+{
+  "topic": "Strings [Basic and Medium]",
+  "problems": [
+    {
+      "id": "S01",
+      "title": "Remove Outermost Parentheses",
+      "difficulty": "Medium",
+      "pattern": "Basic and Easy String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/remove-outermost-parentheses",
+        "leetcode": "https://leetcode.com/problems/remove-outermost-parentheses/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S02",
+      "title": "Reverse words in a given string / Palindrome Check",
+      "difficulty": "Medium",
+      "pattern": "Basic and Easy String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/reverse-words-in-a-string/",
+        "leetcode": "https://leetcode.com/problems/reverse-words-in-a-string/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S03",
+      "title": "Largest Odd Number in a String",
+      "difficulty": "Easy",
+      "pattern": "Basic and Easy String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/largest-odd-number-in-a-string",
+        "leetcode": "https://leetcode.com/problems/largest-odd-number-in-string/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S04",
+      "title": "Longest Common Prefix",
+      "difficulty": "Easy",
+      "pattern": "Basic and Easy String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/longest-common-prefix",
+        "leetcode": "https://leetcode.com/problems/longest-common-prefix/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S05",
+      "title": "Isomorphic String",
+      "difficulty": "Easy",
+      "pattern": "Basic and Easy String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/isomorphic-string",
+        "leetcode": "https://leetcode.com/problems/isomorphic-strings/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S06",
+      "title": "Rotate String",
+      "difficulty": "Easy",
+      "pattern": "Basic and Easy String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/check-if-one-string-is-rotation-of-another",
+        "leetcode": "https://leetcode.com/problems/rotate-string/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S07",
+      "title": "Check if two strings are anagram of each other",
+      "difficulty": "Easy",
+      "pattern": "Basic and Easy String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/check-if-two-strings-are-anagrams-of-each-other/",
+        "leetcode": "https://leetcode.com/problems/valid-anagram/#:~:text=Given%20two%20strings%20s%20and,the%20original%20letters%20exactly%20once.&text=Constraints%3A,.length%20%3C%3D%205%20*%2010",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S08",
+      "title": "Sort Characters by Frequency",
+      "difficulty": "Easy",
+      "pattern": "Medium String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/sort-characters-by-frequency",
+        "leetcode": "https://leetcode.com/problems/sort-characters-by-frequency/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S09",
+      "title": "Maximum Nesting Depth of the Parentheses",
+      "difficulty": "Medium",
+      "pattern": "Medium String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/maximum-nesting-depth-of-parenthesis",
+        "leetcode": "https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S10",
+      "title": "Roman to Integer",
+      "difficulty": "Medium",
+      "pattern": "Medium String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/roman-numerals-to-integer",
+        "leetcode": "https://leetcode.com/problems/roman-to-integer/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S11",
+      "title": "String to Integer (atoi)",
+      "difficulty": "Medium",
+      "pattern": "Medium String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/recursive-implementation-of-atoi",
+        "leetcode": "https://leetcode.com/problems/string-to-integer-atoi/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S12",
+      "title": "Count Number of Substrings",
+      "difficulty": "Easy",
+      "pattern": "Medium String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/count-number-of-substrings",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S13",
+      "title": "Longest Palindromic Substring",
+      "difficulty": "Medium",
+      "pattern": "Medium String Problems",
+      "summary": "",
+      "links": {
+        "striver": "",
+        "leetcode": "https://leetcode.com/problems/longest-palindromic-substring/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S14",
+      "title": "Sum of Beauty of All Substrings",
+      "difficulty": "Medium",
+      "pattern": "Medium String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/sum-of-beauty-of-all-substring",
+        "leetcode": "https://leetcode.com/problems/sum-of-beauty-of-all-substrings/",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "S15",
+      "title": "Reverse every word in a string",
+      "difficulty": "Medium",
+      "pattern": "Medium String Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/reverse-words-in-a-string/",
+        "leetcode": "https://leetcode.com/problems/reverse-words-in-a-string/",
+        "gfg": "",
+        "youtube": ""
+      }
+    }
+  ]
+}

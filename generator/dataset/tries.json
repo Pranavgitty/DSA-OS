@@ -2,7 +2,7 @@
   "topic": "Tries",
   "problems": [
     {
-      "id": "T01",
+      "id": "TR01",
       "title": "Trie Implementation and Operations",
       "difficulty": "Hard",
       "pattern": "Theory",
@@ -15,7 +15,7 @@
       }
     },
     {
-      "id": "T02",
+      "id": "TR02",
       "title": "Trie Implementation and Advanced Operations",
       "difficulty": "Hard",
       "pattern": "Problems",
@@ -28,7 +28,7 @@
       }
     },
     {
-      "id": "T03",
+      "id": "TR03",
       "title": "Longest Word with All Prefixes",
       "difficulty": "Medium",
       "pattern": "Problems",
@@ -41,7 +41,7 @@
       }
     },
     {
-      "id": "T04",
+      "id": "TR04",
       "title": "Number of distinct substrings in a string",
       "difficulty": "Medium",
       "pattern": "Problems",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "T05",
+      "id": "TR05",
       "title": "Bit PreRequisites for TRIE Problems",
       "difficulty": "Easy",
       "pattern": "Problems",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "T06",
+      "id": "TR06",
       "title": "Maximum XOR of two numbers in an array",
       "difficulty": "Hard",
       "pattern": "Problems",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "T07",
+      "id": "TR07",
       "title": "Maximum Xor with an element from an array",
       "difficulty": "Hard",
       "pattern": "Problems",

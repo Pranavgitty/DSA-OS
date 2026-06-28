@@ -2,7 +2,7 @@
   "topic": "Learn Important Sorting Techniques",
   "problems": [
     {
-      "id": "L01",
+      "id": "X01",
       "title": "Selection Sort",
       "difficulty": "Easy",
       "pattern": "Sorting-I",
@@ -15,7 +15,7 @@
       }
     },
     {
-      "id": "L02",
+      "id": "X02",
       "title": "Bubble Sort",
       "difficulty": "Easy",
       "pattern": "Sorting-I",
@@ -28,7 +28,7 @@
       }
     },
     {
-      "id": "L03",
+      "id": "X03",
       "title": "Insertion Sorting",
       "difficulty": "Easy",
       "pattern": "Sorting-I",
@@ -41,7 +41,7 @@
       }
     },
     {
-      "id": "L04",
+      "id": "X04",
       "title": "Merge Sorting",
       "difficulty": "Medium",
       "pattern": "Sorting-II",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "L05",
+      "id": "X05",
       "title": "Recursive Bubble Sort",
       "difficulty": "Easy",
       "pattern": "Sorting-II",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "L06",
+      "id": "X06",
       "title": "Recursive Insertion Sort",
       "difficulty": "Easy",
       "pattern": "Sorting-II",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "L07",
+      "id": "X07",
       "title": "Quick Sorting",
       "difficulty": "Easy",
       "pattern": "Sorting-II",
