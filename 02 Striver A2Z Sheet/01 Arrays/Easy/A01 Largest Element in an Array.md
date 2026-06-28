@@ -4,13 +4,15 @@ title: Largest Element in an Array
 difficulty: Easy
 topic: Arrays
 pattern: Traversal
-
-status: 🟩 Solved
-
+status: Solved
 links:
   striver: https://takeuforward.org/plus/dsa/problems/largest-element?source=strivers-a2z-dsa-track
   leetcode: None
   gfg: https://www.geeksforgeeks.org/problems/largest-element-in-array4009/1
+solvedOn: 2026-06-28
+lastRevision: 2026-06-28
+nextRevision: 2026-06-29
+confidence: 1
 ---
 
 # Largest Element in an Array

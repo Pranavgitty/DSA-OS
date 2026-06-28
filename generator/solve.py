@@ -1,16 +1,21 @@
-"""
-Future command:
+import json
+import sys
+from pathlib import Path
 
-python solve.py A25
+ROOT = Path(__file__).parent
+PROGRESS = ROOT / "data" / "progress.json"
 
-Will:
-- Mark a problem solved
-- Update progress
-- Regenerate dashboards
-"""
+problem_id = sys.argv[1]
 
-def main():
-    print("Solve command coming soon.")
+with open(PROGRESS, "r", encoding="utf-8") as f:
+    progress = json.load(f)
 
-if __name__ == "__main__":
-    main()
+if problem_id not in progress:
+    progress[problem_id] = {}
+
+progress[problem_id]["solved"] = True
+
+with open(PROGRESS, "w", encoding="utf-8") as f:
+    json.dump(progress, f, indent=4)
+
+print(f"{problem_id} marked as solved.")
