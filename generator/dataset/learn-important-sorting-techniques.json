@@ -1,0 +1,96 @@
+{
+  "topic": "Learn Important Sorting Techniques",
+  "problems": [
+    {
+      "id": "L01",
+      "title": "Selection Sort",
+      "difficulty": "Easy",
+      "pattern": "Sorting-I",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/sorting/selection-sort-algorithm/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/HGk_ypEuS24?t=167"
+      }
+    },
+    {
+      "id": "L02",
+      "title": "Bubble Sort",
+      "difficulty": "Easy",
+      "pattern": "Sorting-I",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/bubble-sort-algorithm/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/HGk_ypEuS24?t=1061"
+      }
+    },
+    {
+      "id": "L03",
+      "title": "Insertion Sorting",
+      "difficulty": "Easy",
+      "pattern": "Sorting-I",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/insertion-sort-algorithm/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/HGk_ypEuS24?t=1900"
+      }
+    },
+    {
+      "id": "L04",
+      "title": "Merge Sorting",
+      "difficulty": "Medium",
+      "pattern": "Sorting-II",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/merge-sort-algorithm/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/ogjf7ORKfd8"
+      }
+    },
+    {
+      "id": "L05",
+      "title": "Recursive Bubble Sort",
+      "difficulty": "Easy",
+      "pattern": "Sorting-II",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/arrays/recursive-bubble-sort-algorithm/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "L06",
+      "title": "Recursive Insertion Sort",
+      "difficulty": "Easy",
+      "pattern": "Sorting-II",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/arrays/recursive-insertion-sort-algorithm/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "L07",
+      "title": "Quick Sorting",
+      "difficulty": "Easy",
+      "pattern": "Sorting-II",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/quick-sort-algorithm/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/WIrA4YexLRQ"
+      }
+    }
+  ]
+}

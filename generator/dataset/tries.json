@@ -1,0 +1,96 @@
+{
+  "topic": "Tries",
+  "problems": [
+    {
+      "id": "T01",
+      "title": "Trie Implementation and Operations",
+      "difficulty": "Hard",
+      "pattern": "Theory",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/implement-trie-1/",
+        "leetcode": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=dBGUmUQhjaM&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp"
+      }
+    },
+    {
+      "id": "T02",
+      "title": "Trie Implementation and Advanced Operations",
+      "difficulty": "Hard",
+      "pattern": "Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/implement-trie-ii/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "T03",
+      "title": "Longest Word with All Prefixes",
+      "difficulty": "Medium",
+      "pattern": "Problems",
+      "summary": "",
+      "links": {
+        "striver": "",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=AWnBa91lThI&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=3"
+      }
+    },
+    {
+      "id": "T04",
+      "title": "Number of distinct substrings in a string",
+      "difficulty": "Medium",
+      "pattern": "Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/number-of-distinct-substrings-in-a-string-using-trie/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=RV0QeTyHZxo&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=4"
+      }
+    },
+    {
+      "id": "T05",
+      "title": "Bit PreRequisites for TRIE Problems",
+      "difficulty": "Easy",
+      "pattern": "Problems",
+      "summary": "",
+      "links": {
+        "striver": "",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/5iyuU4hQFrw"
+      }
+    },
+    {
+      "id": "T06",
+      "title": "Maximum XOR of two numbers in an array",
+      "difficulty": "Hard",
+      "pattern": "Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/maximum-xor-of-two-numbers-in-an-array/",
+        "leetcode": "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=EIhAwfHubE8&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=6"
+      }
+    },
+    {
+      "id": "T07",
+      "title": "Maximum Xor with an element from an array",
+      "difficulty": "Hard",
+      "pattern": "Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/trie/maximum-xor-queries-trie/",
+        "leetcode": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=Q8LhG9Pi5KM&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=7"
+      }
+    }
+  ]
+}

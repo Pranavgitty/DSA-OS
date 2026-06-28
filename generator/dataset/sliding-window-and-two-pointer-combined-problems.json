@@ -1,0 +1,161 @@
+{
+  "topic": "Sliding Window & Two Pointer Combined Problems",
+  "problems": [
+    {
+      "id": "S01",
+      "title": "Longest Substring Without Repeating Characters",
+      "difficulty": "Medium",
+      "pattern": "Medium Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/length-of-longest-substring-without-any-repeating-character/",
+        "leetcode": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+        "gfg": "",
+        "youtube": "https://youtu.be/-zSxTJkcdAo?si=I2zfR-vlDMg0zU9z"
+      }
+    },
+    {
+      "id": "S02",
+      "title": " Max Consecutive Ones III",
+      "difficulty": "Medium",
+      "pattern": "Medium Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/max-consecutive-ones-iii",
+        "leetcode": "https://leetcode.com/problems/max-consecutive-ones-iii/",
+        "gfg": "",
+        "youtube": "https://youtu.be/3E4JBHSLpYk?si=SoOW64pP6otEKxBw"
+      }
+    },
+    {
+      "id": "S03",
+      "title": " Fruit Into Baskets",
+      "difficulty": "Medium",
+      "pattern": "Medium Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/fruit-into-baskets",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/e3bs0uA1NhQ?si=gR8pO62u-nJeFAXk"
+      }
+    },
+    {
+      "id": "S04",
+      "title": "Longest Repeating Character Replacement",
+      "difficulty": "Hard",
+      "pattern": "Medium Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/longest-repeating-character-replacement",
+        "leetcode": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+        "gfg": "",
+        "youtube": "https://youtu.be/_eNhaDCr6P0?si=pBWcEjozF5poom0p"
+      }
+    },
+    {
+      "id": "S05",
+      "title": "Binary Subarrays With Sum",
+      "difficulty": "Hard",
+      "pattern": "Medium Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/binary-subarray-with-sum",
+        "leetcode": "https://leetcode.com/problems/binary-subarrays-with-sum/",
+        "gfg": "",
+        "youtube": "https://youtu.be/XnMdNUkX6VM?si=Nyt8EveeLUg8lmty"
+      }
+    },
+    {
+      "id": "S06",
+      "title": "Count number of Nice subarrays",
+      "difficulty": "Hard",
+      "pattern": "Medium Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/count-number-of-nice-subarrays",
+        "leetcode": "https://leetcode.com/problems/count-number-of-nice-subarrays/",
+        "gfg": "",
+        "youtube": "https://youtu.be/j_QOv9OT9Og?si=Oq5-5hyFkzVSOZpP"
+      }
+    },
+    {
+      "id": "S07",
+      "title": "Number of Substrings Containing All Three Characters",
+      "difficulty": "Hard",
+      "pattern": "Medium Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/number-of-substring-containing-all-three-characters",
+        "leetcode": "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/",
+        "gfg": "",
+        "youtube": "https://youtu.be/xtqN4qlgr8s?si=kuaLHVOLXhh5Z2tW"
+      }
+    },
+    {
+      "id": "S08",
+      "title": "Maximum Points You Can Obtain from Cards ",
+      "difficulty": "Medium",
+      "pattern": "Medium Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/maximum-point-you-can-obtain-from-cards",
+        "leetcode": "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
+        "gfg": "",
+        "youtube": "https://youtu.be/pBWCOCS636U?si=-X64rY67noxvOwrG"
+      }
+    },
+    {
+      "id": "S09",
+      "title": "Longest Substring With At Most K Distinct Characters",
+      "difficulty": "Hard",
+      "pattern": "Hard Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/longest-substring-with-at-most-k-distinct-characters",
+        "leetcode": "https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/",
+        "gfg": "",
+        "youtube": "https://youtu.be/teM9ZsVRQyc?si=Kh0_u6aCkkBU3Q33"
+      }
+    },
+    {
+      "id": "S10",
+      "title": "Subarrays with K Different Integers",
+      "difficulty": "Medium",
+      "pattern": "Hard Problems",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/subarray-with-k-different-integers",
+        "leetcode": "https://leetcode.com/problems/subarrays-with-k-different-integers/",
+        "gfg": "",
+        "youtube": "https://youtu.be/7wYGbV_LsX4?si=KWa48RgLDCvdNqRb"
+      }
+    },
+    {
+      "id": "S11",
+      "title": "Minimum Window Substring ",
+      "difficulty": "Hard",
+      "pattern": "Hard Problems",
+      "summary": "",
+      "links": {
+        "striver": "",
+        "leetcode": "https://leetcode.com/problems/minimum-window-substring/",
+        "gfg": "",
+        "youtube": "https://youtu.be/WJaij9ffOIY?si=-xnsWIH84zWU0ICd"
+      }
+    },
+    {
+      "id": "S12",
+      "title": "Minimum Window Subsequence",
+      "difficulty": "Hard",
+      "pattern": "Hard Problems",
+      "summary": "",
+      "links": {
+        "striver": "",
+        "leetcode": "https://leetcode.com/problems/minimum-window-subsequence/",
+        "gfg": "",
+        "youtube": ""
+      }
+    }
+  ]
+}

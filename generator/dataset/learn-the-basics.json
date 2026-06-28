@@ -1,0 +1,707 @@
+{
+  "topic": "Learn the basics",
+  "problems": [
+    {
+      "id": "L01",
+      "title": "Input Output",
+      "difficulty": "Easy",
+      "pattern": "Things to Know in C++/Java/Python or any language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/c/c-basic-input-output/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/EAR7De6Goz4?t=250"
+      }
+    },
+    {
+      "id": "L02",
+      "title": "Cpp Basics",
+      "difficulty": "Easy",
+      "pattern": "Things to Know in C++/Java/Python or any language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/what-are-arrays-strings",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/EAR7De6Goz4?t=2415"
+      }
+    },
+    {
+      "id": "L03",
+      "title": "If ElseIf",
+      "difficulty": "Easy",
+      "pattern": "Things to Know in C++/Java/Python or any language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/if-else/if-else-statements/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/EAR7De6Goz4?t=1259"
+      }
+    },
+    {
+      "id": "L04",
+      "title": "Switch Case",
+      "difficulty": "Easy",
+      "pattern": "Things to Know in C++/Java/Python or any language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/switch-case/switch-case-statements/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/EAR7De6Goz4"
+      }
+    },
+    {
+      "id": "L05",
+      "title": "What are arrays, strings?",
+      "difficulty": "Easy",
+      "pattern": "Things to Know in C++/Java/Python or any language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/what-are-arrays-strings",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/EAR7De6Goz4?t=2415"
+      }
+    },
+    {
+      "id": "L06",
+      "title": "For loops",
+      "difficulty": "Easy",
+      "pattern": "Things to Know in C++/Java/Python or any language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/for-loop/understanding-for-loop/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/EAR7De6Goz4?t=3096"
+      }
+    },
+    {
+      "id": "L07",
+      "title": "While loops",
+      "difficulty": "Easy",
+      "pattern": "Things to Know in C++/Java/Python or any language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/while-loop/while-loops-in-programming/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/EAR7De6Goz4?t=3459"
+      }
+    },
+    {
+      "id": "L08",
+      "title": "Functions (Pass by Reference and Value)",
+      "difficulty": "Easy",
+      "pattern": "Things to Know in C++/Java/Python or any language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/functions-pass-by-reference-and-value",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/EAR7De6Goz4?t=3677"
+      }
+    },
+    {
+      "id": "L09",
+      "title": "Theory with examples",
+      "difficulty": "Easy",
+      "pattern": "Things to Know in C++/Java/Python or any language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/time-complexity/time-and-space-complexity-strivers-a2z-dsa-course/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/FPu9Uld7W-E"
+      }
+    },
+    {
+      "id": "L10",
+      "title": "Easy and Medium",
+      "difficulty": "Easy",
+      "pattern": "Build-up Logical Thinking",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L11",
+      "title": "Hard",
+      "difficulty": "Easy",
+      "pattern": "Build-up Logical Thinking",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L12",
+      "title": "Pattern 1",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L13",
+      "title": "Pattern 2",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L14",
+      "title": "Pattern 3",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L15",
+      "title": "Pattern 4",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L16",
+      "title": "Pattern 5",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L17",
+      "title": "Pattern 6",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L18",
+      "title": "Pattern 7",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L19",
+      "title": "Pattern 8",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L20",
+      "title": "Pattern 9",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L21",
+      "title": "Pattern 10",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L22",
+      "title": "Pattern 11",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L23",
+      "title": "Pattern 12",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L24",
+      "title": "Pattern 13",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L25",
+      "title": "Pattern 14",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L26",
+      "title": "Pattern 15",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L27",
+      "title": "Pattern 16",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L28",
+      "title": "Pattern 17",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L29",
+      "title": "Pattern 18",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L30",
+      "title": "Pattern 19",
+      "difficulty": "Easy",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L31",
+      "title": "Pattern 20",
+      "difficulty": "Medium",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L32",
+      "title": "Pattern 21",
+      "difficulty": "Medium",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L33",
+      "title": "Pattern 22",
+      "difficulty": "Medium",
+      "pattern": "Patterns",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=tNm_NNSB3_w&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=3"
+      }
+    },
+    {
+      "id": "L34",
+      "title": "STL",
+      "difficulty": "Easy",
+      "pattern": "Learn STL/Java-Collections or similar thing in your\n            language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/c/c-stl-tutorial-most-frequent-used-stl-containers/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=RRVYpIET_RU"
+      }
+    },
+    {
+      "id": "L35",
+      "title": "Java Collections",
+      "difficulty": "Easy",
+      "pattern": "Learn STL/Java-Collections or similar thing in your\n            language",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/java-collections",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "L36",
+      "title": "Count all Digits of a Number",
+      "difficulty": "Easy",
+      "pattern": "Know Basic Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/count-digits-in-a-number/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/1xNbjMdbjug"
+      }
+    },
+    {
+      "id": "L37",
+      "title": "Reverse a number",
+      "difficulty": "Easy",
+      "pattern": "Know Basic Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/maths/reverse-digits-of-a-number",
+        "leetcode": "https://leetcode.com/problems/reverse-integer/",
+        "gfg": "",
+        "youtube": "https://youtu.be/1xNbjMdbjug?t=930"
+      }
+    },
+    {
+      "id": "L38",
+      "title": "Palindrome Number",
+      "difficulty": "Easy",
+      "pattern": "Know Basic Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/check-if-a-number-is-palindrome-or-not/",
+        "leetcode": "https://leetcode.com/problems/palindrome-number/",
+        "gfg": "",
+        "youtube": "https://youtu.be/1xNbjMdbjug?t=1230"
+      }
+    },
+    {
+      "id": "L39",
+      "title": "GCD of Two Numbers",
+      "difficulty": "Easy",
+      "pattern": "Know Basic Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/find-gcd-of-two-numbers/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/1xNbjMdbjug?t=2684"
+      }
+    },
+    {
+      "id": "L40",
+      "title": "Check if the Number is Armstrong",
+      "difficulty": "Easy",
+      "pattern": "Know Basic Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/maths/check-if-a-number-is-armstrong-number-or-not/",
+        "leetcode": "https://leetcode.com/problems/armstrong-number/",
+        "gfg": "",
+        "youtube": "https://youtu.be/1xNbjMdbjug?t=1418"
+      }
+    },
+    {
+      "id": "L41",
+      "title": "Print all Divisors",
+      "difficulty": "easy",
+      "pattern": "Know Basic Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/print-all-divisors-of-a-given-number/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/1xNbjMdbjug?t=1580"
+      }
+    },
+    {
+      "id": "L42",
+      "title": "Check for Prime Number",
+      "difficulty": "Easy",
+      "pattern": "Know Basic Maths",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/check-if-a-number-is-prime-or-not/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://youtu.be/1xNbjMdbjug?t=2381"
+      }
+    },
+    {
+      "id": "L43",
+      "title": "Understand recursion by print something N times",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Recursion",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/recursion/introduction-to-recursion-understand-recursion-by-printing-something-n-times/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=yVdKa8dnKiE&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9"
+      }
+    },
+    {
+      "id": "L44",
+      "title": "Print name N times using recursion",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Recursion",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/recursion/print-name-n-times-using-recursion/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=un6PLygfXrA&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=2"
+      }
+    },
+    {
+      "id": "L45",
+      "title": "Print 1 to N using Recursion",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Recursion",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/recursion/print-1-to-n-using-recursion/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=un6PLygfXrA&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=2"
+      }
+    },
+    {
+      "id": "L46",
+      "title": "Print N to 1 using Recursion",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Recursion",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/recursion/print-n-to-1-using-recursion/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=un6PLygfXrA&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=2"
+      }
+    },
+    {
+      "id": "L47",
+      "title": "Sum of First N Numbers",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Recursion",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/sum-of-first-n-natural-numbers/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=69ZCDFy-OUo&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=3"
+      }
+    },
+    {
+      "id": "L48",
+      "title": "Factorial of a given number",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Recursion",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/factorial-of-a-number-iterative-and-recursive",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=69ZCDFy-OUo&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=3"
+      }
+    },
+    {
+      "id": "L49",
+      "title": "Reverse an array",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Recursion",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/reverse-a-given-array/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=twuC1F6gLI8&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=4"
+      }
+    },
+    {
+      "id": "L50",
+      "title": "Check if String is Palindrome or Not ",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Recursion",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/check-if-the-given-string-is-palindrome-or-not/",
+        "leetcode": "https://leetcode.com/problems/valid-palindrome/",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=twuC1F6gLI8&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=4"
+      }
+    },
+    {
+      "id": "L51",
+      "title": "Fibonacci Number",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Recursion",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/arrays/print-fibonacci-series-up-to-nth-term/",
+        "leetcode": "https://leetcode.com/problems/fibonacci-number/",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=kvRjNm4rVBE&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=5"
+      }
+    },
+    {
+      "id": "L52",
+      "title": "Basic Hashing",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Hashing",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/hashing/hashing-maps-time-complexity-collisions-division-rule-of-hashing-strivers-a2z-dsa-course/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": "https://www.youtube.com/watch?v=KEs5UyBJ39g"
+      }
+    },
+    {
+      "id": "L53",
+      "title": "Counting Frequencies of Array Elements",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Hashing",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/data-structure/count-frequency-of-each-element-in-the-array/",
+        "leetcode": "",
+        "gfg": "",
+        "youtube": ""
+      }
+    },
+    {
+      "id": "L54",
+      "title": "Highest Occurring Element in an Array",
+      "difficulty": "Easy",
+      "pattern": "Learn Basic Hashing",
+      "summary": "",
+      "links": {
+        "striver": "https://takeuforward.org/arrays/find-the-highest-lowest-frequency-element/",
+        "leetcode": "https://leetcode.com/problems/frequency-of-the-most-frequent-element/",
+        "gfg": "",
+        "youtube": ""
+      }
+    }
+  ]
+}

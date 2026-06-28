@@ -1,0 +1,123 @@
+const fs = require("fs");
+const path = require("path");
+
+const INPUT = path.join(__dirname, "input", "striver.html");
+
+const html = fs.readFileSync(INPUT, "utf8");
+
+// Extract every Flight chunk
+const regex = /self\.__next_f\.push\(\[1,"([\s\S]*?)"\]\)/g;
+
+let match;
+let stream = "";
+
+while ((match = regex.exec(html)) !== null) {
+    stream += JSON.parse(`"${match[1]}"`);
+}
+
+console.log("Decoded stream length:", stream.length);
+
+const idx = stream.indexOf('"sections"');
+
+console.log("sections index:", idx);
+
+function extractJSONArray(str, startIdx) {
+    let start = str.indexOf("[", startIdx);
+
+    let depth = 0;
+
+    for (let i = start; i < str.length; i++) {
+
+        if (str[i] === "[") depth++;
+
+        else if (str[i] === "]") {
+
+            depth--;
+
+            if (depth === 0) {
+
+                return str.slice(start, i + 1);
+
+            }
+
+        }
+
+    }
+
+    return null;
+}
+
+const sectionsJSON = extractJSONArray(stream, idx);
+
+const OUTPUT = path.join(__dirname, "..", "dataset");
+
+if (!fs.existsSync(OUTPUT)) {
+    fs.mkdirSync(OUTPUT, { recursive: true });
+}
+
+function slugify(name) {
+    return name
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/[^\w\s-]/g, "")
+        .trim()
+        .replace(/\s+/g, "-");
+}
+
+const sections = JSON.parse(sectionsJSON);
+
+console.log("Total Sections:", sections.length);
+
+let totalProblems = 0;
+
+for (const section of sections) {
+
+    const dataset = {
+        topic: section.category_name,
+        problems: []
+    };
+
+    let counter = 1;
+
+    for (const sub of section.subcategories) {
+
+        for (const problem of sub.problems) {
+
+            dataset.problems.push({
+
+                id: `${slugify(section.category_name).charAt(0).toUpperCase()}${String(counter).padStart(2, "0")}`,
+
+                title: problem.problem_name,
+
+                difficulty: problem.difficulty,
+
+                pattern: sub.subcategory_name,
+
+                summary: "",
+
+                links: {
+                    striver: problem.article === "$undefined" ? "" : problem.article,
+                    leetcode: problem.leetcode === "$undefined" ? "" : problem.leetcode,
+                    gfg: problem.link === "$undefined" ? "" : problem.link,
+                    youtube: problem.youtube === "$undefined" ? "" : problem.youtube
+                }
+
+            });
+
+            counter++;
+
+        }
+
+    }
+
+    const filename = `${slugify(section.category_name)}.json`;
+
+    fs.writeFileSync(
+        path.join(OUTPUT, filename),
+        JSON.stringify(dataset, null, 2)
+    );
+
+    console.log("✓", filename);
+}
+
+
