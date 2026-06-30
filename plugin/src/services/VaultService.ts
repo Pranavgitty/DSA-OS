@@ -14,63 +14,21 @@ export class VaultService {
 
 	}
 
-	getProgress() {
+	getProblemById(id: string): TFile | null {
 
-		const problems = this.getAllProblems();
-
-		const solved = problems.filter(file => {
+		for (const file of this.getAllProblems()) {
 
 			const cache = this.app.metadataCache.getFileCache(file);
 
-			return cache?.frontmatter?.status === "Solved";
+			if (String(cache?.frontmatter?.id) === id) {
 
-		});
+				return file;
 
-		return {
-			total: problems.length,
-			solved: solved.length,
-			percentage:
-				problems.length === 0
-					? 0
-					: Math.round((solved.length / problems.length) * 100)
-		};
-
-	}
-	getTopicProgress() {
-
-		const problems = this.getAllProblems();
-
-		const topics = new Map<
-			string,
-			{ total: number; solved: number }
-		>();
-
-		for (const file of problems) {
-
-			const cache = this.app.metadataCache.getFileCache(file);
-
-			const topic = cache?.frontmatter?.topic;
-
-			if (!topic) continue;
-
-			if (!topics.has(topic)) {
-				topics.set(topic, {
-					total: 0,
-					solved: 0,
-				});
-			}
-
-			const current = topics.get(topic)!;
-
-			current.total++;
-
-			if (cache?.frontmatter?.status === "Solved") {
-				current.solved++;
 			}
 
 		}
 
-		return topics;
+		return null;
 
 	}
 }

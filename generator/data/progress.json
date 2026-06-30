@@ -1,7 +1,10 @@
 {
     "A01": {
-        "solved": true,
-        "confidence": 0,
-        "lastSolved": null
+        "status": "Solved",
+        "attempts": 1,
+        "lastSolved": "2026-06-28",
+        "revisionStage": 0,
+        "favorite": false,
+        "notes": ""
     }
 }

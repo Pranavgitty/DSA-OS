@@ -7,11 +7,6 @@ pattern: {{ pattern }}
 
 status: {% if solved %}Solved{% else %}Not Started{% endif %}
 
-confidence: 0
-solvedOn:
-lastRevision:
-nextRevision:
-
 tags:
 {% for tag in tags %}
   - {{ tag }}

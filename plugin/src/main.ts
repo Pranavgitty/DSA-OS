@@ -1,27 +1,63 @@
 import { Plugin } from "obsidian";
 
+import { ProblemStatusService } from "./services/ProblemStatusService";
+import { SessionService } from "./services/SessionService";
+import { UIService } from "./services/UIService";
+
 import { registerToggleSolved } from "./commands/toggleSolved";
+
 import { DSAView, DSA_VIEW_TYPE } from "./views/DSAview";
 
 export default class DSAOSPlugin extends Plugin {
+
+	private sessionService!: SessionService;
 
 	async onload() {
 
 		console.log("DSA-OS Loaded");
 
+		// -----------------------------
+		// Services
+		// -----------------------------
+
+		this.sessionService = new SessionService(this);
+
+		const problemStatus = new ProblemStatusService(this.app);
+
+		const ui = new UIService(this.app);
+
+		// -----------------------------
+		// Commands
+		// -----------------------------
+
 		registerToggleSolved(this);
+
+		// -----------------------------
+		// Background Services
+		// -----------------------------
+
+		problemStatus.register();
+
+		// -----------------------------
+		// Views
+		// -----------------------------
 
 		this.registerView(
 			DSA_VIEW_TYPE,
-			(leaf) => new DSAView(leaf)
+			leaf => new DSAView(leaf)
 		);
+
+		// -----------------------------
+		// Ribbon Icon
+		// -----------------------------
 
 		this.addRibbonIcon(
 			"brain",
 			"Open DSA-OS",
 			async () => {
 
-				const leaf = this.app.workspace.getRightLeaf(false);
+				const leaf =
+					this.app.workspace.getRightLeaf(false);
 
 				if (!leaf) return;
 
@@ -31,9 +67,18 @@ export default class DSAOSPlugin extends Plugin {
 				});
 
 				this.app.workspace.revealLeaf(leaf);
+
 			}
 		);
+
 	}
 
 	onunload() {}
+
+	getSessionService(): SessionService {
+
+		return this.sessionService;
+
+	}
+
 }
