@@ -39,14 +39,15 @@ export class RevisionService {
             date.getDate() + this.getRevisionInterval(confidence)
         );
 
-        return date.toISOString().split("T")[0];
+        const iso = date.toISOString();
 
+        return iso.substring(0, 10);
     }
 
     /**
      * Increases confidence by one.
      * Max confidence = 5.
-     */
+     */ 
     static increaseConfidence(current: number): number {
 
         return Math.min(current + 1, 5);

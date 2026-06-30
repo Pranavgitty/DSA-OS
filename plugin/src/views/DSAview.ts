@@ -1,42 +1,57 @@
-import { ProgressService } from "../services/ProgressService";
+import DSAOSPlugin from "../main";
 import { EventService } from "../services/EventService";
-import { DailyPlannerService } from "../services/DailyPlannerService";
 
 import {
 	ItemView,
 	WorkspaceLeaf,
 } from "obsidian";
 
-export const DSA_VIEW_TYPE = "dsa-os-view";
+export const DSA_VIEW_TYPE =
+	"dsa-os-view";
 
 export class DSAView extends ItemView {
 
-	constructor(leaf: WorkspaceLeaf) {
+	constructor(
+		leaf: WorkspaceLeaf,
+		private plugin: DSAOSPlugin
+	) {
+
 		super(leaf);
+
 	}
 
-	private readonly refreshHandler = () => {
-		this.onOpen();
-	};
-	
+	private readonly refreshHandler =
+		() => {
+
+			this.onOpen();
+
+		};
+
 	getViewType(): string {
+
 		return DSA_VIEW_TYPE;
+
 	}
 
 	getDisplayText(): string {
+
 		return "DSA-OS";
+
 	}
 
 	getIcon(): string {
+
 		return "brain";
+
 	}
 
 	private createProgressBar(
 		parent: HTMLElement,
 		percentage: number
-	) {
+	): void {
 
-		const bar = parent.createDiv();
+		const bar =
+			parent.createDiv();
 
 		bar.style.height = "8px";
 		bar.style.width = "100%";
@@ -45,11 +60,14 @@ export class DSAView extends ItemView {
 			"var(--background-modifier-border)";
 		bar.style.margin = "6px 0";
 
-		const fill = bar.createDiv();
+		const fill =
+			bar.createDiv();
 
 		fill.style.height = "100%";
-		fill.style.width = `${percentage}%`;
-		fill.style.borderRadius = "999px";
+		fill.style.width =
+			`${percentage}%`;
+		fill.style.borderRadius =
+			"999px";
 		fill.style.backgroundColor =
 			"var(--interactive-accent)";
 
@@ -57,25 +75,43 @@ export class DSAView extends ItemView {
 
 	async onOpen() {
 
-		const container = this.containerEl.children[1];
+		const container =
+			this.containerEl.children[1];
+
+		if (
+			!(
+				container instanceof
+				HTMLElement
+			)
+		) {
+
+			return;
+
+		}
 
 		container.empty();
 
-		const progressService = new ProgressService(this.app);
+		const progress =
+			this.plugin
+				.getProgressService();
 
-		const progress = progressService.getOverallProgress();
+		const planner =
+			this.plugin
+				.getDailyPlannerService();
 
-		const topicProgress = progressService.getTopicProgress();
+		await planner.initialize();
 
-		console.log(topicProgress);
-		
-		const planner = new DailyPlannerService(this.app);
+		const todaysPlan =
+			planner.getTodaysPlan();
 
-		const todaysPlan = planner.getTodaysPlan();
+		const overall =
+			progress.getOverallProgress();
 
-		// ==========================
+		const topicProgress =
+			progress.getTopicProgress();
+					// ==================================================
 		// Header
-		// ==========================
+		// ==================================================
 
 		container.createEl("h2", {
 			text: "🧠 DSA-OS",
@@ -83,10 +119,10 @@ export class DSAView extends ItemView {
 
 		container.createEl("hr");
 
-		// ==========================
-		// Daily Planner
-		// ==========================
-		
+		// ==================================================
+		// Today's Plan
+		// ==================================================
+
 		container.createEl("h3", {
 			text: "🎯 Today's Plan",
 		});
@@ -94,7 +130,7 @@ export class DSAView extends ItemView {
 		if (todaysPlan.length === 0) {
 
 			container.createEl("p", {
-				text: "🎉 All topics completed!",
+				text: "🎉 All problems completed!",
 			});
 
 		} else {
@@ -108,50 +144,62 @@ export class DSAView extends ItemView {
 			}
 
 		}
-		
+
 		container.createEl("hr");
 
-		// ==========================
+		// ==================================================
 		// Overall Progress
-		// ==========================
+		// ==================================================
 
 		container.createEl("h3", {
 			text: "📈 Overall Progress",
 		});
 
 		container.createEl("p", {
-			text: `${progress.solved} / ${progress.total} Solved`,
+			text: `${overall.solved} / ${overall.total} Solved`,
 		});
 
 		container.createEl("p", {
-			text: `${progress.percentage}% Complete`,
+			text: `${overall.percentage}% Complete`,
 		});
 
 		this.createProgressBar(
 			container,
-			progress.percentage
+			overall.percentage
 		);
 
 		container.createEl("hr");
 
-		// ==========================
+		// ==================================================
 		// Topic Progress
-		// ==========================
+		// ==================================================
 
 		container.createEl("h3", {
 			text: "📚 Topic Progress",
 		});
 
-		const sortedTopics = [...topicProgress.entries()].sort(
-			(a, b) => a[0].localeCompare(b[0])
-		);
+		const sortedTopics =
+			[...topicProgress.entries()].sort(
+				(a, b) =>
+					a[0].localeCompare(
+						b[0]
+					)
+			);
 
-		for (const [topic, data] of sortedTopics) {
+		for (
+			const [topic, data]
+			of sortedTopics
+		) {
 
 			const percentage =
 				data.total === 0
 					? 0
-					: Math.round((data.solved / data.total) * 100);
+					: Math.round(
+							(
+								data.solved /
+								data.total
+							) * 100
+					  );
 
 			container.createEl("h4", {
 				text: topic,
@@ -163,7 +211,8 @@ export class DSAView extends ItemView {
 			);
 
 			container.createEl("p", {
-				text: `${data.solved} / ${data.total}`,
+				text:
+					`${data.solved} / ${data.total}`,
 			});
 
 		}
@@ -174,8 +223,7 @@ export class DSAView extends ItemView {
 			"progress-changed",
 			this.refreshHandler
 		);
-		
-	}
+			}
 
 	async onClose() {
 
@@ -184,6 +232,6 @@ export class DSAView extends ItemView {
 			this.refreshHandler
 		);
 
-}
+	}
 
 }
