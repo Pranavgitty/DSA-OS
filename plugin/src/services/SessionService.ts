@@ -1,290 +1,158 @@
-import { App, TFile } from "obsidian";
+import { TFile } from "obsidian";
 import DSAOSPlugin from "../main";
 
 export interface PlannerSession {
-
 	date: string;
-
-	roadmapIndex: number;
-
 	dailyTarget: number;
-
 	todaysPlan: string[];
-
 	carryOver: string[];
-
 }
 
 export class SessionService {
+	private session!: PlannerSession;
 
-	private session: PlannerSession;
-
-	constructor(private plugin: DSAOSPlugin) {
-
-		this.session = this.createDefaultSession();
-
-	}
+	constructor(private plugin: DSAOSPlugin) {}
 
 	private createDefaultSession(): PlannerSession {
-
 		return {
-
 			date: "",
-
-			roadmapIndex: 0,
-
 			dailyTarget: 5,
-
 			todaysPlan: [],
-
 			carryOver: [],
-
 		};
+	}
 
+	async initialize(): Promise<void> {
+		const data = await this.plugin.loadData();
+
+		if (
+			!data ||
+			typeof data !== "object" ||
+			!("session" in data) ||
+			!data.session
+		) {
+			this.session = this.createDefaultSession();
+			await this.save();
+			return;
+		}
+
+		const session = data.session as Partial<PlannerSession>;
+
+		this.session = {
+			date:
+				typeof session.date === "string"
+					? session.date
+					: "",
+			dailyTarget:
+				typeof session.dailyTarget === "number"
+					? Math.max(1, session.dailyTarget)
+					: 5,
+			todaysPlan: Array.isArray(session.todaysPlan)
+				? [...session.todaysPlan]
+				: [],
+			carryOver: Array.isArray(session.carryOver)
+				? [...session.carryOver]
+				: [],
+		};
+	}
+
+	async save(): Promise<void> {
+		await this.plugin.saveData({
+			session: this.session,
+		});
 	}
 
 	getSession(): PlannerSession {
-
 		return structuredClone(this.session);
-
 	}
 
-	setSession(session: PlannerSession): void {
-
+	async setSession(
+		session: PlannerSession
+	): Promise<void> {
 		this.session = structuredClone(session);
-
+		await this.save();
 	}
 
-	resetSession(): void {
-
+	async resetSession(): Promise<void> {
 		this.session = this.createDefaultSession();
-
+		await this.save();
 	}
 
 	getDate(): string {
-
 		return this.session.date;
-
 	}
 
-	setDate(date: string): void {
-
+	async setDate(date: string): Promise<void> {
 		this.session.date = date;
-
-	}
-
-	getRoadmapIndex(): number {
-
-		return this.session.roadmapIndex;
-
-	}
-
-	setRoadmapIndex(index: number): void {
-
-		this.session.roadmapIndex = Math.max(0, index);
-
-	}
-
-	incrementRoadmapIndex(count = 1): void {
-
-		this.session.roadmapIndex += count;
-
+		await this.save();
 	}
 
 	getDailyTarget(): number {
-
 		return this.session.dailyTarget;
-
 	}
 
-	setDailyTarget(target: number): void {
-
+	async setDailyTarget(
+		target: number
+	): Promise<void> {
 		this.session.dailyTarget = Math.max(1, target);
-
+		await this.save();
 	}
 
 	getTodaysPlanIds(): string[] {
-
 		return [...this.session.todaysPlan];
-
 	}
 
-	setTodaysPlanIds(ids: string[]): void {
-
+	async setTodaysPlanIds(
+		ids: string[]
+	): Promise<void> {
 		this.session.todaysPlan = [...ids];
-
-	}
-
-	clearTodaysPlan(): void {
-
-		this.session.todaysPlan = [];
-
-	}
-
-	addTodaysProblem(id: string): void {
-
-		if (!this.session.todaysPlan.includes(id)) {
-
-			this.session.todaysPlan.push(id);
-
-		}
-
-	}
-
-	removeTodaysProblem(id: string): void {
-
-		this.session.todaysPlan =
-			this.session.todaysPlan.filter(
-				problemId => problemId !== id
-			);
-
+		await this.save();
 	}
 
 	getCarryOverIds(): string[] {
-
 		return [...this.session.carryOver];
-
 	}
 
-	setCarryOverIds(ids: string[]): void {
-
+	async setCarryOverIds(
+		ids: string[]
+	): Promise<void> {
 		this.session.carryOver = [...ids];
-
+		await this.save();
 	}
 
-	clearCarryOver(): void {
+	async startNewSession(
+		date: string,
+		problems: string[],
+		carryOver: string[]
+	): Promise<void> {
+		this.session = {
+			date,
+			dailyTarget: this.session.dailyTarget,
+			todaysPlan: [...problems],
+			carryOver: [...carryOver],
+		};
 
-		this.session.carryOver = [];
-
+		await this.save();
 	}
 
-	addCarryOver(id: string): void {
-
-		if (!this.session.carryOver.includes(id)) {
-
-			this.session.carryOver.push(id);
-
-		}
-
-	}
-
-	removeCarryOver(id: string): void {
-
-		this.session.carryOver =
-			this.session.carryOver.filter(
-				problemId => problemId !== id
-			);
-
-	}
-
-	isCarryOverFrozen(): boolean {
-
-		return (
-			this.session.carryOver.length >
-			Math.floor(this.session.dailyTarget / 2)
-		);
-
-	}
-
-	isSessionComplete(
-		isSolved: (id: string) => boolean
-	): boolean {
-
-		return this.session.todaysPlan.every(id =>
-			isSolved(id)
-		);
-
-	}
-
-	getRemainingProblemIds(
-		isSolved: (id: string) => boolean
-	): string[] {
-
-		return this.session.todaysPlan.filter(
-			id => !isSolved(id)
-		);
-
-	}
-
-	getCompletedProblemIds(
-		isSolved: (id: string) => boolean
-	): string[] {
-
-		return this.session.todaysPlan.filter(
-			id => isSolved(id)
-		);
-
-	}
-
-	getCompletionPercentage(
-		isSolved: (id: string) => boolean
-	): number {
-
-		if (this.session.todaysPlan.length === 0) {
-
-			return 0;
-
-		}
-
-		const completed =
-			this.getCompletedProblemIds(isSolved).length;
-
-		return Math.round(
-			(completed / this.session.todaysPlan.length) * 100
-		);
-
-	}
-
-	resolveFiles(
-		files: TFile[]
-	): TFile[] {
-
-		const map = new Map<string, TFile>();
+	resolveFiles(files: TFile[]): TFile[] {
+		const fileMap = new Map<string, TFile>();
 
 		for (const file of files) {
-
 			const cache =
 				this.plugin.app.metadataCache.getFileCache(file);
 
 			const id = cache?.frontmatter?.id;
 
-			if (id) {
-
-				map.set(String(id), file);
-
+			if (id !== undefined && id !== null) {
+				fileMap.set(String(id), file);
 			}
-
 		}
 
 		return this.session.todaysPlan
-			.map(id => map.get(id))
+			.map((id) => fileMap.get(id))
 			.filter(
 				(file): file is TFile => file !== undefined
 			);
-
 	}
-
-	startNewSession(
-		date: string,
-		roadmapIndex: number,
-		problems: string[],
-		carryOver: string[]
-	): void {
-
-		this.session = {
-
-			date,
-
-			roadmapIndex,
-
-			dailyTarget: this.session.dailyTarget,
-
-			todaysPlan: [...problems],
-
-			carryOver: [...carryOver],
-
-		};
-
-	}
-
 }
