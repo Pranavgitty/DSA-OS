@@ -1,5 +1,6 @@
-import { VaultService } from "../services/VaultService";
-import { RevisionQueueService } from "../services/RevisionQueueService";
+import { ProgressService } from "../services/ProgressService";
+import { EventService } from "../services/EventService";
+import { DailyPlannerService } from "../services/DailyPlannerService";
 
 import {
 	ItemView,
@@ -14,6 +15,10 @@ export class DSAView extends ItemView {
 		super(leaf);
 	}
 
+	private readonly refreshHandler = () => {
+		this.onOpen();
+	};
+	
 	getViewType(): string {
 		return DSA_VIEW_TYPE;
 	}
@@ -26,21 +31,47 @@ export class DSAView extends ItemView {
 		return "brain";
 	}
 
+	private createProgressBar(
+		parent: HTMLElement,
+		percentage: number
+	) {
+
+		const bar = parent.createDiv();
+
+		bar.style.height = "8px";
+		bar.style.width = "100%";
+		bar.style.borderRadius = "999px";
+		bar.style.backgroundColor =
+			"var(--background-modifier-border)";
+		bar.style.margin = "6px 0";
+
+		const fill = bar.createDiv();
+
+		fill.style.height = "100%";
+		fill.style.width = `${percentage}%`;
+		fill.style.borderRadius = "999px";
+		fill.style.backgroundColor =
+			"var(--interactive-accent)";
+
+	}
+
 	async onOpen() {
 
 		const container = this.containerEl.children[1];
 
 		container.empty();
 
-		const vault = new VaultService(this.app);
+		const progressService = new ProgressService(this.app);
 
-		const progress = vault.getProgress();
+		const progress = progressService.getOverallProgress();
 
-		const topicProgress = vault.getTopicProgress();
+		const topicProgress = progressService.getTopicProgress();
 
-		const revisionQueue = new RevisionQueueService(this.app);
+		console.log(topicProgress);
+		
+		const planner = new DailyPlannerService(this.app);
 
-		const todaysProblems = revisionQueue.getTodaysProblems();
+		const todaysPlan = planner.getTodaysPlan();
 
 		// ==========================
 		// Header
@@ -50,6 +81,34 @@ export class DSAView extends ItemView {
 			text: "🧠 DSA-OS",
 		});
 
+		container.createEl("hr");
+
+		// ==========================
+		// Daily Planner
+		// ==========================
+		
+		container.createEl("h3", {
+			text: "🎯 Today's Plan",
+		});
+
+		if (todaysPlan.length === 0) {
+
+			container.createEl("p", {
+				text: "🎉 All topics completed!",
+			});
+
+		} else {
+
+			for (const file of todaysPlan) {
+
+				container.createEl("p", {
+					text: `□ ${file.basename}`,
+				});
+
+			}
+
+		}
+		
 		container.createEl("hr");
 
 		// ==========================
@@ -68,6 +127,11 @@ export class DSAView extends ItemView {
 			text: `${progress.percentage}% Complete`,
 		});
 
+		this.createProgressBar(
+			container,
+			progress.percentage
+		);
+
 		container.createEl("hr");
 
 		// ==========================
@@ -78,7 +142,11 @@ export class DSAView extends ItemView {
 			text: "📚 Topic Progress",
 		});
 
-		for (const [topic, data] of topicProgress) {
+		const sortedTopics = [...topicProgress.entries()].sort(
+			(a, b) => a[0].localeCompare(b[0])
+		);
+
+		for (const [topic, data] of sortedTopics) {
 
 			const percentage =
 				data.total === 0
@@ -89,42 +157,33 @@ export class DSAView extends ItemView {
 				text: topic,
 			});
 
+			this.createProgressBar(
+				container,
+				percentage
+			);
+
 			container.createEl("p", {
-				text: `${data.solved} / ${data.total} (${percentage}%)`,
+				text: `${data.solved} / ${data.total}`,
 			});
 
 		}
 
 		container.createEl("hr");
 
-		// ==========================
-		// Today's Revision
-		// ==========================
-
-		container.createEl("h3", {
-			text: `📅 Today's Revision (${todaysProblems.length})`,
-		});
-
-		if (todaysProblems.length === 0) {
-
-			container.createEl("p", {
-				text: "🎉 Nothing to revise today!",
-			});
-
-		} else {
-
-			for (const file of todaysProblems) {
-
-				container.createEl("p", {
-					text: `□ ${file.basename}`,
-				});
-
-			}
-
-		}
-
+		EventService.on(
+			"progress-changed",
+			this.refreshHandler
+		);
+		
 	}
 
-	async onClose() {}
+	async onClose() {
+
+		EventService.off(
+			"progress-changed",
+			this.refreshHandler
+		);
+
+}
 
 }
