@@ -25,3 +25,5 @@ plugin/main.js
 .obsidian/plugins/
 
 # But keep our own plugin (which lives in /plugin)
+tmp/__pycache__/
+tmp/plugin/node_modules/
