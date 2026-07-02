@@ -10,10 +10,6 @@ import { DSAView, DSA_VIEW_TYPE } from "./views/DSAview";
 
 export default class DSAOSPlugin extends Plugin {
 
-	private getToday(): string {
-		return this.getToday()?? "";
-	}
-
 	async onload() {
 
 		console.log("DSA-OS Loaded");
@@ -25,7 +21,6 @@ export default class DSAOSPlugin extends Plugin {
 
 		const problemStatus = new ProblemStatusService(this.app);
 
-		const ui = new UIService(this.app);
 
 		// -----------------------------
 		// Commands

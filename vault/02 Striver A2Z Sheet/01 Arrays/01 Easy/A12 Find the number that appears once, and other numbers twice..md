@@ -4,16 +4,16 @@ title: Find the number that appears once, and other numbers twice.
 difficulty: Medium
 topic: 01 Arrays
 pattern: Easy
-
-status: Not Started
-
+status: Solved
 tags:
-
-
 links:
   striver: https://takeuforward.org/arrays/find-the-number-that-appears-once-and-the-other-numbers-twice/
   leetcode: https://leetcode.com/problems/single-number/
-  gfg: 
+  gfg:
+confidence: 1
+solvedOn: 2026-07-02
+lastRevision: 2026-07-02
+nextRevision: 2026-07-03
 ---
 
 # Find the number that appears once, and other numbers twice.

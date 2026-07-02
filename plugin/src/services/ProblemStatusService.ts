@@ -1,16 +1,18 @@
 import { App, MarkdownView, TFile } from "obsidian";
 
 import { ProgressService } from "./ProgressService";
-import { EventService } from "./EventService";
+import { ProblemToggleService } from "./ProblemToggleService";
 import { VaultService } from "./VaultService";
 
 export class ProblemStatusService {
 	private readonly vault: VaultService;
 	private readonly progress: ProgressService;
+	private readonly toggleService: ProblemToggleService;
 
 	constructor(private readonly app: App) {
 		this.vault = new VaultService(app);
 		this.progress = new ProgressService(app);
+		this.toggleService = new ProblemToggleService(app);
 	}
 
 	register(): void {
@@ -38,24 +40,26 @@ export class ProblemStatusService {
 			return null;
 		}
 
-		return this.vault.isProblemFile(file) ? file : null;
+		return this.vault.isProblemFile(file)
+			? file
+			: null;
 	}
 
 	private createButton(file: TFile): void {
 		this.removeButton();
 
-		const view = this.app.workspace.getActiveViewOfType(MarkdownView);
+		const view =
+			this.app.workspace.getActiveViewOfType(MarkdownView);
 
 		if (!view) {
 			return;
 		}
 
 		const button = document.createElement("button");
+
 		button.className = "dsa-os-solved-button";
 
-		const solved = this.progress
-			.getSolvedProblems()
-			.some(problem => problem.path === file.path);
+		const solved = this.progress.isSolved(file);
 
 		button.textContent = solved
 			? "✅ Solved"
@@ -65,20 +69,19 @@ export class ProblemStatusService {
 		button.style.marginBottom = "12px";
 
 		button.onclick = async () => {
-			const wasSolved = button.textContent === "✅ Solved";
-
 			await this.toggleSolved(file);
 
-			button.textContent = wasSolved
-				? "⬜ Mark Solved"
-				: "✅ Solved";
+			button.textContent = this.progress.isSolved(file)
+				? "✅ Solved"
+				: "⬜ Mark Solved";
 		};
 
 		view.contentEl.prepend(button);
 	}
 
 	private removeButton(): void {
-		const view = this.app.workspace.getActiveViewOfType(MarkdownView);
+		const view =
+			this.app.workspace.getActiveViewOfType(MarkdownView);
 
 		if (!view) {
 			return;
@@ -90,8 +93,6 @@ export class ProblemStatusService {
 	}
 
 	private async toggleSolved(file: TFile): Promise<void> {
-		await this.progress.toggleSolved(file);
-
-		EventService.emit("progress-changed");
+		await this.toggleService.toggle(file);
 	}
 }

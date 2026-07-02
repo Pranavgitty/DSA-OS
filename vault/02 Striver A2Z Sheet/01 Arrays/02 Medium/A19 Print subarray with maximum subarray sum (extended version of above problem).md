@@ -4,16 +4,16 @@ title: Print subarray with maximum subarray sum (extended version of above probl
 difficulty: Medium
 topic: 01 Arrays
 pattern: Medium
-
-status: Not Started
-
+status: Solved
 tags:
-
-
 links:
   striver: https://takeuforward.org/data-structure/kadanes-algorithm-maximum-subarray-sum-in-an-array/
-  leetcode: 
-  gfg: 
+  leetcode:
+  gfg:
+confidence: 1
+solvedOn: 2026-07-02
+lastRevision: 2026-07-02
+nextRevision: 2026-07-03
 ---
 
 # Print subarray with maximum subarray sum (extended version of above problem)

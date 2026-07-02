@@ -4,16 +4,16 @@ title: Longest subarray with sum K
 difficulty: Medium
 topic: 01 Arrays
 pattern: Easy
-
-status: Not Started
-
+status: Solved
 tags:
-
-
 links:
   striver: https://takeuforward.org/data-structure/length-of-the-longest-subarray-with-zero-sum/
-  leetcode: 
-  gfg: 
+  leetcode:
+  gfg:
+confidence: 1
+solvedOn: 2026-07-02
+lastRevision: 2026-07-02
+nextRevision: 2026-07-03
 ---
 
 # Longest subarray with sum K

@@ -4,16 +4,16 @@ title: Left Rotate Array by K Places
 difficulty: Easy
 topic: 01 Arrays
 pattern: Easy
-
-status: Not Started
-
+status: Solved
 tags:
-
-
 links:
   striver: https://takeuforward.org/data-structure/rotate-array-by-k-elements/
   leetcode: https://leetcode.com/problems/rotate-array/
-  gfg: 
+  gfg:
+confidence: 1
+solvedOn: 2026-07-02
+lastRevision: 2026-07-02
+nextRevision: 2026-07-03
 ---
 
 # Left Rotate Array by K Places

@@ -4,13 +4,16 @@ title: Remove duplicates from Sorted array
 difficulty: Easy
 topic: 01 Arrays
 pattern: Easy
-status: Not Started
+status: Solved
 tags:
 links:
   striver: https://takeuforward.org/data-structure/remove-duplicates-in-place-from-sorted-array/
   leetcode: https://leetcode.com/problems/remove-duplicates-from-sorted-array/#:~:text=Input%3A%20nums%20%3D%20%5B0%2C,%2C%203%2C%20and%204%20respectively.
   gfg:
-solvedOn: 2026-06-30
+solvedOn: 2026-07-02
+confidence: 1
+lastRevision: 2026-07-02
+nextRevision: 2026-07-03
 ---
 
 # Remove duplicates from Sorted array
