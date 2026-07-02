@@ -1,24 +1,22 @@
+import { ItemView, WorkspaceLeaf } from "obsidian";
+
 import { ProgressService } from "../services/ProgressService";
 import { EventService } from "../services/EventService";
-import { DailyPlannerService } from "../services/DailyPlannerService";
-
-import {
-	ItemView,
-	WorkspaceLeaf,
-} from "obsidian";
 
 export const DSA_VIEW_TYPE = "dsa-os-view";
 
 export class DSAView extends ItemView {
 
+	private readonly progressService = new ProgressService(this.app);
+
+	private readonly refreshHandler = () => {
+		this.render();
+	};
+
 	constructor(leaf: WorkspaceLeaf) {
 		super(leaf);
 	}
 
-	private readonly refreshHandler = () => {
-		this.onOpen();
-	};
-	
 	getViewType(): string {
 		return DSA_VIEW_TYPE;
 	}
@@ -31,91 +29,43 @@ export class DSAView extends ItemView {
 		return "brain";
 	}
 
-	private createProgressBar(
-		parent: HTMLElement,
-		percentage: number
-	) {
+	async onOpen(): Promise<void> {
+		EventService.on(
+			"progress-changed",
+			this.refreshHandler
+		);
 
-		const bar = parent.createDiv();
-
-		bar.style.height = "8px";
-		bar.style.width = "100%";
-		bar.style.borderRadius = "999px";
-		bar.style.backgroundColor =
-			"var(--background-modifier-border)";
-		bar.style.margin = "6px 0";
-
-		const fill = bar.createDiv();
-
-		fill.style.height = "100%";
-		fill.style.width = `${percentage}%`;
-		fill.style.borderRadius = "999px";
-		fill.style.backgroundColor =
-			"var(--interactive-accent)";
-
+		this.render();
 	}
 
-	async onOpen() {
+	async onClose(): Promise<void> {
+		EventService.off(
+			"progress-changed",
+			this.refreshHandler
+		);
+	}
 
-		const container = this.containerEl.children[1] as HTMLElement | undefined;
+	private render(): void {
+		const container =
+			this.containerEl.children[1] as HTMLElement | undefined;
 
-		if (!container) return;
+		if (!container) {
+			return;
+		}
 
 		container.empty();
 
-		const progressService = new ProgressService(this.app);
+		const progress =
+			this.progressService.getOverallProgress();
 
-		const progress = progressService.getOverallProgress();
-
-		const topicProgress = progressService.getTopicProgress();
-
-		console.log(topicProgress);
-		
-		const planner = new DailyPlannerService(this.app);
-
-		const todaysPlan = planner.getTodaysPlan();
-
-		// ==========================
-		// Header
-		// ==========================
+		const topicProgress =
+			this.progressService.getTopicProgress();
 
 		container.createEl("h2", {
 			text: "🧠 DSA-OS",
 		});
 
 		container.createEl("hr");
-
-		// ==========================
-		// Daily Planner
-		// ==========================
-		
-		container.createEl("h3", {
-			text: "🎯 Today's Plan",
-		});
-
-		if (todaysPlan.length === 0) {
-
-			container.createEl("p", {
-				text: "🎉 All topics completed!",
-			});
-
-		} else {
-
-			for (const file of todaysPlan) {
-
-				container.createEl("p", {
-					text: `□ ${file.basename}`,
-				});
-
-			}
-
-		}
-		
-		container.createEl("hr");
-
-		// ==========================
-		// Overall Progress
-		// ==========================
 
 		container.createEl("h3", {
 			text: "📈 Overall Progress",
@@ -136,24 +86,23 @@ export class DSAView extends ItemView {
 
 		container.createEl("hr");
 
-		// ==========================
-		// Topic Progress
-		// ==========================
-
 		container.createEl("h3", {
 			text: "📚 Topic Progress",
 		});
 
-		const sortedTopics = [...topicProgress.entries()].sort(
-			(a, b) => a[0].localeCompare(b[0])
-		);
+		const sortedTopics =
+			[...topicProgress.entries()].sort(
+				(a, b) => a[0].localeCompare(b[0])
+			);
 
 		for (const [topic, data] of sortedTopics) {
 
 			const percentage =
 				data.total === 0
 					? 0
-					: Math.round((data.solved / data.total) * 100);
+					: Math.round(
+							(data.solved / data.total) * 100
+					  );
 
 			container.createEl("h4", {
 				text: topic,
@@ -167,25 +116,29 @@ export class DSAView extends ItemView {
 			container.createEl("p", {
 				text: `${data.solved} / ${data.total}`,
 			});
-
 		}
-
-		container.createEl("hr");
-
-		EventService.on(
-			"progress-changed",
-			this.refreshHandler
-		);
-		
 	}
 
-	async onClose() {
+	private createProgressBar(
+		parent: HTMLElement,
+		percentage: number
+	): void {
 
-		EventService.off(
-			"progress-changed",
-			this.refreshHandler
-		);
+		const bar = parent.createDiv();
 
-}
+		bar.style.height = "8px";
+		bar.style.width = "100%";
+		bar.style.borderRadius = "999px";
+		bar.style.backgroundColor =
+			"var(--background-modifier-border)";
+		bar.style.margin = "6px 0";
 
+		const fill = bar.createDiv();
+
+		fill.style.height = "100%";
+		fill.style.width = `${percentage}%`;
+		fill.style.borderRadius = "999px";
+		fill.style.backgroundColor =
+			"var(--interactive-accent)";
+	}
 }

@@ -1,16 +1,15 @@
 import { Plugin } from "obsidian";
 
-import { ProblemStatusService } from "./services/ProblemStatusService";
-
-import { UIService } from "./services/UIService";
-
 import { registerToggleSolved } from "./commands/toggleSolved";
+
+import { ProblemStatusService } from "./services/ProblemStatusService";
+import { UIService } from "./services/UIService";
 
 import { DSAView, DSA_VIEW_TYPE } from "./views/DSAview";
 
 export default class DSAOSPlugin extends Plugin {
 
-	async onload() {
+	async onload(): Promise<void> {
 
 		console.log("DSA-OS Loaded");
 
@@ -18,9 +17,11 @@ export default class DSAOSPlugin extends Plugin {
 		// Services
 		// -----------------------------
 
-
 		const problemStatus = new ProblemStatusService(this.app);
 
+		// Instantiate if UIService has constructor side effects.
+		// Otherwise this can be removed later.
+		new UIService(this.app);
 
 		// -----------------------------
 		// Commands
@@ -44,18 +45,18 @@ export default class DSAOSPlugin extends Plugin {
 		);
 
 		// -----------------------------
-		// Ribbon Icon
+		// Ribbon
 		// -----------------------------
 
 		this.addRibbonIcon(
 			"brain",
 			"Open DSA-OS",
 			async () => {
+				const leaf = this.app.workspace.getRightLeaf(false);
 
-				const leaf =
-					this.app.workspace.getRightLeaf(false);
-
-				if (!leaf) return;
+				if (!leaf) {
+					return;
+				}
 
 				await leaf.setViewState({
 					type: DSA_VIEW_TYPE,
@@ -63,13 +64,9 @@ export default class DSAOSPlugin extends Plugin {
 				});
 
 				this.app.workspace.revealLeaf(leaf);
-
 			}
 		);
-
 	}
 
-	onunload() {}
-
-
+	onunload(): void {}
 }
