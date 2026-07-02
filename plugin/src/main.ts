@@ -1,7 +1,7 @@
 import { Plugin } from "obsidian";
 
 import { ProblemStatusService } from "./services/ProblemStatusService";
-import { SessionService } from "./services/SessionService";
+
 import { UIService } from "./services/UIService";
 
 import { registerToggleSolved } from "./commands/toggleSolved";
@@ -14,8 +14,6 @@ export default class DSAOSPlugin extends Plugin {
 		return this.getToday()?? "";
 	}
 
-	private sessionService!: SessionService;
-
 	async onload() {
 
 		console.log("DSA-OS Loaded");
@@ -24,7 +22,6 @@ export default class DSAOSPlugin extends Plugin {
 		// Services
 		// -----------------------------
 
-		this.sessionService = new SessionService(this);
 
 		const problemStatus = new ProblemStatusService(this.app);
 
@@ -79,10 +76,5 @@ export default class DSAOSPlugin extends Plugin {
 
 	onunload() {}
 
-	getSessionService(): SessionService {
-
-		return this.sessionService;
-
-	}
 
 }
