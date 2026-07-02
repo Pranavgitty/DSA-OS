@@ -1,18 +1,10 @@
-import { App, PluginSettingTab, Setting } from 'obsidian';
-import MyPlugin from './main';
+import { App, PluginSettingTab, Setting } from "obsidian";
+import DSAOSPlugin from "./main";
 
-export interface MyPluginSettings {
-	mySetting: string;
-}
+export class DSAOSSettingTab extends PluginSettingTab {
+	private readonly plugin: DSAOSPlugin;
 
-export const DEFAULT_SETTINGS: MyPluginSettings = {
-	mySetting: 'default',
-};
-
-export class SampleSettingTab extends PluginSettingTab {
-	plugin: MyPlugin;
-
-	constructor(app: App, plugin: MyPlugin) {
+	constructor(app: App, plugin: DSAOSPlugin) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
@@ -22,17 +14,14 @@ export class SampleSettingTab extends PluginSettingTab {
 
 		containerEl.empty();
 
+		containerEl.createEl("h2", {
+			text: "DSA-OS Settings",
+		});
+
 		new Setting(containerEl)
-			.setName('Settings #1')
-			.setDesc("It's a secret")
-			.addText((text) =>
-				text
-					.setPlaceholder('Enter your secret')
-					.setValue(this.plugin.settings.mySetting)
-					.onChange(async (value) => {
-						this.plugin.settings.mySetting = value;
-						await this.plugin.saveSettings();
-					}),
+			.setName("Coming Soon")
+			.setDesc(
+				"Plugin settings will be added in a future release."
 			);
 	}
 }

@@ -10,6 +10,10 @@ import { DSAView, DSA_VIEW_TYPE } from "./views/DSAview";
 
 export default class DSAOSPlugin extends Plugin {
 
+	private getToday(): string {
+		return this.getToday()?? "";
+	}
+
 	private sessionService!: SessionService;
 
 	async onload() {

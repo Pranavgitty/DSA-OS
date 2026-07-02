@@ -4,16 +4,12 @@ title: Second Largest Element
 difficulty: Easy
 topic: 01 Arrays
 pattern: Easy
-
-status: Not Started
-
+status: Solved
 tags:
-
-
 links:
   striver: https://takeuforward.org/data-structure/find-second-smallest-and-second-largest-element-in-an-array/
-  leetcode: 
-  gfg: 
+  leetcode:
+  gfg:
 ---
 
 # Second Largest Element

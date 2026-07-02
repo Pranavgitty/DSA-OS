@@ -1,34 +1,36 @@
 import { App, TFile } from "obsidian";
+import { PATHS } from "../constants/Paths";
 
 export class VaultService {
+	constructor(private readonly app: App) {}
 
-	constructor(private app: App) {}
-
+	/**
+	 * Returns every problem in the Striver sheet.
+	 */
 	getAllProblems(): TFile[] {
-
-		const files = this.app.vault.getMarkdownFiles();
-
-		return files.filter(file =>
-			file.path.startsWith("02 Striver A2Z Sheet/")
-		);
-
+		return this.app.vault
+			.getMarkdownFiles()
+			.filter(file => file.path.startsWith(`${PATHS.STRIVER_ROOT}/`));
 	}
 
+	/**
+	 * Finds a problem by its frontmatter id.
+	 */
 	getProblemById(id: string): TFile | null {
+		return (
+			this.getAllProblems().find(file => {
+				const frontmatter =
+					this.app.metadataCache.getFileCache(file)?.frontmatter;
 
-		for (const file of this.getAllProblems()) {
+				return String(frontmatter?.id ?? "") === id;
+			}) ?? null
+		);
+	}
 
-			const cache = this.app.metadataCache.getFileCache(file);
-
-			if (String(cache?.frontmatter?.id) === id) {
-
-				return file;
-
-			}
-
-		}
-
-		return null;
-
+	/**
+	 * Returns true if the given file belongs to the Striver sheet.
+	 */
+	isProblemFile(file: TFile): boolean {
+		return file.path.startsWith(`${PATHS.STRIVER_ROOT}/`);
 	}
 }

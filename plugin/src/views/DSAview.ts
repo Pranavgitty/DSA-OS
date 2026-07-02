@@ -57,7 +57,9 @@ export class DSAView extends ItemView {
 
 	async onOpen() {
 
-		const container = this.containerEl.children[1];
+		const container = this.containerEl.children[1] as HTMLElement | undefined;
+
+		if (!container) return;
 
 		container.empty();
 
