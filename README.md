@@ -77,15 +77,27 @@ Everything lives in one place:
 
 # 📸 Screenshots
 
-> Screenshots will be added after the first alpha release.
+## Dashboard
 
-| Dashboard | Sidebar |
-|-----------|----------|
-| Coming Soon | Coming Soon |
+<p align="center">
+  <img src="assets/dashboard.png" width="900">
+</p>
 
-| Toggle | Vault |
-|---------|-------|
-| Coming Soon | Coming Soon |
+---
+
+## Sidebar
+
+<p align="center">
+  <img src="assets/sidebar.png" width="300">
+</p>
+
+---
+
+## Vault Structure
+
+<p align="center">
+  <img src="assets/vault.png" width="300">
+</p>
 
 ---
 
