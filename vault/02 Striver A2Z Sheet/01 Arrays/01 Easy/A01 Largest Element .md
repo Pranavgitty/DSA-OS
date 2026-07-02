@@ -1,19 +1,15 @@
 ---
 id: A01
-title: Largest Element 
+title: Largest Element
 difficulty: Easy
 topic: 01 Arrays
 pattern: Easy
-
 status: Not Started
-
 tags:
-
-
 links:
   striver: https://takeuforward.org/data-structure/find-the-largest-element-in-an-array/
-  leetcode: 
-  gfg: 
+  leetcode:
+  gfg:
 ---
 
 # Largest Element 

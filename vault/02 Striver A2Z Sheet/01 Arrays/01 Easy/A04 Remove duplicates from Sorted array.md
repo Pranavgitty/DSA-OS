@@ -4,7 +4,7 @@ title: Remove duplicates from Sorted array
 difficulty: Easy
 topic: 01 Arrays
 pattern: Easy
-status: Solved
+status: Not Started
 tags:
 links:
   striver: https://takeuforward.org/data-structure/remove-duplicates-in-place-from-sorted-array/

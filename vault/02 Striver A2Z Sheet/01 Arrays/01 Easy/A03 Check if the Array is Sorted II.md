@@ -4,7 +4,7 @@ title: Check if the Array is Sorted II
 difficulty: Easy
 topic: 01 Arrays
 pattern: Easy
-status: Solved
+status: Not Started
 tags:
 links:
   striver: https://takeuforward.org/data-structure/check-if-an-array-is-sorted/

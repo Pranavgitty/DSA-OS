@@ -21,6 +21,17 @@ export class ProgressService {
 
 		return cache?.frontmatter?.status === "Solved";
 
+		const frontmatter =
+			this.app.metadataCache.getFileCache(file)?.frontmatter;
+
+		console.log(
+			file.basename,
+			frontmatter?.status,
+			frontmatter?.status === "Solved"
+		);
+
+		return frontmatter?.status === "Solved";
+
 	}
 
 	// ==========================

@@ -4,7 +4,7 @@ title: Second Largest Element
 difficulty: Easy
 topic: 01 Arrays
 pattern: Easy
-status: Solved
+status: Not Started
 tags:
 links:
   striver: https://takeuforward.org/data-structure/find-second-smallest-and-second-largest-element-in-an-array/
