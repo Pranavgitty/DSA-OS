@@ -1,27 +1,15 @@
 import { Plugin } from "obsidian";
 
-import { ProblemStatusService } from "./services/ProblemStatusService";
-import { SessionService } from "./services/SessionService";
-import { ProgressService } from "./services/ProgressService";
-import { VaultService } from "./services/VaultService";
-import { DailyPlannerService } from "./services/DailyPlannerService";
-import { UIService } from "./services/UIService";
-
 import { registerToggleSolved } from "./commands/toggleSolved";
+
+import { ProblemStatusService } from "./services/ProblemStatusService";
+import { UIService } from "./services/UIService";
 
 import { DSAView, DSA_VIEW_TYPE } from "./views/DSAview";
 
 export default class DSAOSPlugin extends Plugin {
 
-	private sessionService!: SessionService;
-
-	private vaultService!: VaultService;
-
-	private progressService!: ProgressService;
-
-	private dailyPlannerService!: DailyPlannerService;
-
-	async onload() {
+	async onload(): Promise<void> {
 
 		console.log("DSA-OS Loaded");
 
@@ -29,32 +17,11 @@ export default class DSAOSPlugin extends Plugin {
 		// Services
 		// -----------------------------
 
-		this.sessionService = new SessionService(this);
+		const problemStatus = new ProblemStatusService(this.app);
 
-		await this.sessionService.initialize();
-
-		this.vaultService = new VaultService(this.app);
-
-		this.progressService = new ProgressService(this.app);
-
-		this.dailyPlannerService =
-			new DailyPlannerService(
-				this.app,
-				this.vaultService,
-				this.progressService,
-				this.sessionService
-			);
-
-		await this.dailyPlannerService.initialize();
-
-		const problemStatus =
-			new ProblemStatusService(this.app);
-
-		const ui =
-			new UIService(this.app);
-
-		// Prevent unused variable warning.
-		void ui;
+		// Instantiate if UIService has constructor side effects.
+		// Otherwise this can be removed later.
+		new UIService(this.app);
 
 		// -----------------------------
 		// Commands
@@ -74,28 +41,21 @@ export default class DSAOSPlugin extends Plugin {
 
 		this.registerView(
 			DSA_VIEW_TYPE,
-			(leaf) => new DSAView(
-				leaf,
-			this
-		)
+			leaf => new DSAView(leaf)
 		);
 
 		// -----------------------------
-		// Ribbon Icon
+		// Ribbon
 		// -----------------------------
 
 		this.addRibbonIcon(
 			"brain",
 			"Open DSA-OS",
 			async () => {
-
-				const leaf =
-					this.app.workspace.getRightLeaf(false);
+				const leaf = this.app.workspace.getRightLeaf(false);
 
 				if (!leaf) {
-
 					return;
-
 				}
 
 				await leaf.setViewState({
@@ -104,36 +64,9 @@ export default class DSAOSPlugin extends Plugin {
 				});
 
 				this.app.workspace.revealLeaf(leaf);
-
 			}
 		);
-
 	}
 
-	onunload() {}
-
-	getSessionService(): SessionService {
-
-		return this.sessionService;
-
-	}
-
-	getVaultService(): VaultService {
-
-		return this.vaultService;
-
-	}
-
-	getProgressService(): ProgressService {
-
-		return this.progressService;
-
-	}
-
-	getDailyPlannerService(): DailyPlannerService {
-
-		return this.dailyPlannerService;
-
-	}
-
+	onunload(): void {}
 }

@@ -1,163 +1,116 @@
 import { App, TFile } from "obsidian";
 import { VaultService } from "./VaultService";
 
-export class ProgressService {
+export interface OverallProgress {
+	total: number;
+	solved: number;
+	remaining: number;
+	percentage: number;
+}
 
-	constructor(private app: App) {}
+export interface TopicProgress {
+	total: number;
+	solved: number;
+}
+
+export class ProgressService {
+	private readonly vault: VaultService;
+
+	constructor(private readonly app: App) {
+		this.vault = new VaultService(app);
+	}
 
 	// ==========================
 	// Helpers
 	// ==========================
 
-	private getAllProblems(): TFile[] {
-
-		return new VaultService(this.app).getAllProblems();
-
+	getAllProblems(): TFile[] {
+		return this.vault.getAllProblems();
 	}
 
-	public isSolved(file: TFile): boolean {
+	isSolved(file: TFile): boolean {
+		const frontmatter =
+			this.app.metadataCache.getFileCache(file)?.frontmatter;
 
-		const cache = this.app.metadataCache.getFileCache(file);
-
-		return cache?.frontmatter?.status === "Solved";
-
+		return frontmatter?.status === "Solved";
 	}
 
 	// ==========================
 	// Overall Progress
 	// ==========================
 
-	getOverallProgress() {
-
+	getOverallProgress(): OverallProgress {
 		const problems = this.getAllProblems();
 
-		const solved = problems.filter(file =>
-			this.isSolved(file)
-		).length;
+		const solved = problems.reduce(
+			(count, file) => count + (this.isSolved(file) ? 1 : 0),
+			0
+		);
+
+		const total = problems.length;
 
 		return {
-			total: problems.length,
+			total,
 			solved,
-			remaining: problems.length - solved,
+			remaining: total - solved,
 			percentage:
-				problems.length === 0
+				total === 0
 					? 0
-					: Math.round((solved / problems.length) * 100),
+					: Math.round((solved / total) * 100),
 		};
-
 	}
 
 	// ==========================
 	// Topic Progress
 	// ==========================
 
-	getTopicProgress() {
-
-		const topics = new Map<
-			string,
-			{
-				total: number;
-				solved: number;
-			}
-		>();
+	getTopicProgress(): Map<string, TopicProgress> {
+		const topics = new Map<string, TopicProgress>();
 
 		for (const file of this.getAllProblems()) {
+			const frontmatter =
+				this.app.metadataCache.getFileCache(file)?.frontmatter;
 
-			const cache = this.app.metadataCache.getFileCache(file);
+			const topic = frontmatter?.topic;
 
-			console.log(file.basename, cache?.frontmatter);
+			if (typeof topic !== "string") {
+				continue;
+			}
 
-			const topic = cache?.frontmatter?.topic;
+			let progress = topics.get(topic);
 
-			if (!topic) continue;
-
-			if (!topics.has(topic)) {
-
-				topics.set(topic, {
+			if (!progress) {
+				progress = {
 					total: 0,
 					solved: 0,
-				});
+				};
 
+				topics.set(topic, progress);
 			}
 
-			const current = topics.get(topic)!;
-
-			current.total++;
+			progress.total++;
 
 			if (this.isSolved(file)) {
-
-				current.solved++;
-
+				progress.solved++;
 			}
-
 		}
 
 		return topics;
-
 	}
 
 	// ==========================
-	// Solved Problems
+	// Queries
 	// ==========================
 
 	getSolvedProblems(): TFile[] {
-
 		return this.getAllProblems().filter(file =>
 			this.isSolved(file)
 		);
-
 	}
 
 	getUnsolvedProblems(): TFile[] {
-
 		return this.getAllProblems().filter(file =>
 			!this.isSolved(file)
 		);
-
 	}
-
-	// ==========================
-	// Status Updates
-	// ==========================
-
-	async markSolved(file: TFile) {
-
-		await this.app.fileManager.processFrontMatter(
-			file,
-			(frontmatter) => {
-
-				frontmatter.status = "Solved";
-
-			}
-		);
-
-	}
-
-	async markUnsolved(file: TFile) {
-
-		await this.app.fileManager.processFrontMatter(
-			file,
-			(frontmatter) => {
-
-				frontmatter.status = "Not Started";
-
-			}
-		);
-
-	}
-
-	async toggleSolved(file: TFile) {
-
-		if (this.isSolved(file)) {
-
-			await this.markUnsolved(file);
-
-		} else {
-
-			await this.markSolved(file);
-
-		}
-
-	}
-
 }

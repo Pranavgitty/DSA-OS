@@ -1,71 +1,65 @@
-import { App, TFile, MarkdownView } from "obsidian";
+import { App, MarkdownView, TFile } from "obsidian";
 
 import { ProgressService } from "./ProgressService";
-import { EventService } from "./EventService";
+import { ProblemToggleService } from "./ProblemToggleService";
+import { VaultService } from "./VaultService";
 
 export class ProblemStatusService {
+	private readonly vault: VaultService;
+	private readonly progress: ProgressService;
+	private readonly toggleService: ProblemToggleService;
 
-	constructor(private app: App) {}
+	constructor(private readonly app: App) {
+		this.vault = new VaultService(app);
+		this.progress = new ProgressService(app);
+		this.toggleService = new ProblemToggleService(app);
+	}
 
-	register() {
-
+	register(): void {
 		this.app.workspace.on(
 			"active-leaf-change",
 			() => this.onActiveLeafChange()
 		);
-
 	}
 
-	private onActiveLeafChange() {
-
+	private onActiveLeafChange(): void {
 		const file = this.getCurrentProblem();
 
 		if (!file) {
-
 			this.removeButton();
 			return;
-
 		}
 
 		this.createButton(file);
-
 	}
 
 	private getCurrentProblem(): TFile | null {
-
 		const file = this.app.workspace.getActiveFile();
 
-		if (!file) return null;
-
-		if (!file.path.startsWith("02 Striver A2Z Sheet/")) {
-
+		if (!file) {
 			return null;
-
 		}
 
-		return file;
-
+		return this.vault.isProblemFile(file)
+			? file
+			: null;
 	}
 
-	private createButton(file: TFile) {
-	
+	private createButton(file: TFile): void {
 		this.removeButton();
 
-		const view = this.app.workspace.getActiveViewOfType(MarkdownView);
+		const view =
+			this.app.workspace.getActiveViewOfType(MarkdownView);
 
-		if (!view) return;
-
-		const container = view.contentEl;
+		if (!view) {
+			return;
+		}
 
 		const button = document.createElement("button");
 
 		button.className = "dsa-os-solved-button";
 
-		const progress = new ProgressService(this.app);
-
-		const solved = progress
-			.getSolvedProblems()
-			.some(f => f.path === file.path);
+		const solved = this.progress.isSolved(file);
 
 		button.textContent = solved
 			? "✅ Solved"
@@ -75,41 +69,30 @@ export class ProblemStatusService {
 		button.style.marginBottom = "12px";
 
 		button.onclick = async () => {
-
-			const wasSolved = button.textContent === "✅ Solved";
-
 			await this.toggleSolved(file);
 
-			button.textContent = wasSolved
-				? "⬜ Mark Solved"
-				: "✅ Solved";
-
+			button.textContent = this.progress.isSolved(file)
+				? "✅ Solved"
+				: "⬜ Mark Solved";
 		};
 
-		container.prepend(button);
-
+		view.contentEl.prepend(button);
 	}
 
-	private removeButton() {
+	private removeButton(): void {
+		const view =
+			this.app.workspace.getActiveViewOfType(MarkdownView);
 
-		const view = this.app.workspace.getActiveViewOfType(MarkdownView);
-
-		if (!view) return;
+		if (!view) {
+			return;
+		}
 
 		view.contentEl
 			.querySelector(".dsa-os-solved-button")
 			?.remove();
-
 	}
 
-	private async toggleSolved(file: TFile) {
-
-		const progress = new ProgressService(this.app);
-
-		await progress.toggleSolved(file);
-
-		EventService.emit("progress-changed");
-
+	private async toggleSolved(file: TFile): Promise<void> {
+		await this.toggleService.toggle(file);
 	}
-
 }

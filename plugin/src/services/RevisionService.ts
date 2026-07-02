@@ -1,57 +1,54 @@
 export class RevisionService {
+	private static readonly MAX_CONFIDENCE = 5;
 
-    /**
-     * Returns the next revision interval (in days)
-     * based on the user's confidence.
-     */
-    static getRevisionInterval(confidence: number): number {
+	private static readonly REVISION_INTERVALS: Record<number, number> = {
+		1: 1,
+		2: 3,
+		3: 7,
+		4: 14,
+		5: 30,
+	};
 
-        switch (confidence) {
-            case 1:
-                return 1;
+	/**
+	 * Returns today's date in YYYY-MM-DD format.
+	 */
+	static getToday(): string {
+		return new Date().toISOString().slice(0, 10);
+	}
 
-            case 2:
-                return 3;
+	/**
+	 * Returns the revision interval (in days)
+	 * for the given confidence level.
+	 */
+	static getRevisionInterval(confidence: number): number {
+		return this.REVISION_INTERVALS[confidence] ?? 1;
+	}
 
-            case 3:
-                return 7;
+	/**
+	 * Calculates the next revision date.
+	 */
+	static getNextRevisionDate(confidence: number): string {
+		const date = new Date();
 
-            case 4:
-                return 14;
+		date.setDate(
+			date.getDate() + this.getRevisionInterval(confidence)
+		);
 
-            case 5:
-                return 30;
+		return date.toISOString().slice(0, 10);
+	}
 
-            default:
-                return 1;
-        }
+	/**
+	 * Increases confidence by one.
+	 * Maximum confidence = 5.
+	 */
+	static increaseConfidence(current: number): number {
+		return Math.min(current + 1, this.MAX_CONFIDENCE);
+	}
 
-    }
-
-    /**
-     * Calculates the next revision date.
-     */
-    static getNextRevisionDate(confidence: number): string {
-
-        const date = new Date();
-
-        date.setDate(
-            date.getDate() + this.getRevisionInterval(confidence)
-        );
-
-        const iso = date.toISOString();
-
-        return iso.substring(0, 10);
-    }
-
-    /**
-     * Increases confidence by one.
-     * Max confidence = 5.
-     */ 
-    static increaseConfidence(current: number): number {
-
-        return Math.min(current + 1, 5);
-
-    }
-
+	/**
+	 * Resets confidence to the minimum level.
+	 */
+	static resetConfidence(): number {
+		return 1;
+	}
 }
