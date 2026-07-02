@@ -1,28 +1,62 @@
+<div align="center">
+
 # 🧠 DSA-OS
 
-> Transform your Obsidian vault into a complete operating system for mastering Data Structures & Algorithms.
+### The Competitive Programming Operating System for Obsidian
 
-DSA-OS is an open-source Obsidian plugin and vault that helps you study DSA with structured notes, progress tracking, revision scheduling, and an organized Striver A2Z workflow.
+Build a structured, distraction-free DSA workflow inside your Obsidian vault.
+
+<p>
+
+![Status](https://img.shields.io/badge/status-alpha-orange)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
+![Obsidian](https://img.shields.io/badge/Obsidian-Plugin-7C3AED)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+</p>
+
+</div>
 
 ---
 
-## ✨ Features
+## 🚀 What is DSA-OS?
 
-### 📊 Progress Tracking
+**DSA-OS** is an open-source Obsidian plugin and vault ecosystem designed to help students master **Data Structures & Algorithms**.
+
+Instead of juggling spreadsheets, browser tabs, scattered notes, and revision schedules, DSA-OS turns your Obsidian vault into a complete learning operating system.
+
+Everything lives in one place:
+
+- 📚 Problems
+- 📈 Progress
+- 🧠 Revision
+- 📝 Notes
+- 🎯 Patterns
+- ❌ Mistakes
+
+---
+
+# ✨ Features
+
+## 📊 Progress Tracking
 
 - Overall completion percentage
 - Topic-wise progress
-- Live progress updates
-- Visual sidebar dashboard
+- Live sidebar dashboard
+- Automatic progress updates
 
-### ✅ Problem Management
+---
 
-- Mark problems as Solved / Not Started
+## ✅ Problem Management
+
+- One-click Solved / Not Started toggle
 - Revision metadata
 - Confidence tracking
-- One-click toggle button
+- Frontmatter-based workflow
 
-### 📚 Structured Vault
+---
+
+## 📚 Structured Learning
 
 - Complete Striver A2Z organization
 - Topic folders
@@ -30,35 +64,55 @@ DSA-OS is an open-source Obsidian plugin and vault that helps you study DSA with
 - Pattern Library
 - Mistake tracking
 
-### ⚡ Obsidian Integration
+---
 
-- Native sidebar
-- Ribbon commands
-- Command Palette support
+## ⚡ Native Obsidian Experience
+
+- Sidebar View
+- Ribbon Icon
+- Command Palette
 - Markdown-first workflow
 
 ---
 
-# 📂 Project Structure
+# 📸 Screenshots
+
+> Screenshots will be added after the first alpha release.
+
+| Dashboard | Sidebar |
+|-----------|----------|
+| Coming Soon | Coming Soon |
+
+| Toggle | Vault |
+|---------|-------|
+| Coming Soon | Coming Soon |
+
+---
+
+# 🗂 Repository Structure
 
 ```text
-DSA-OS/
+DSA-OS
 │
 ├── plugin/
 │   ├── src/
 │   ├── manifest.json
-│   └── styles.css
+│   ├── styles.css
+│   └── package.json
 │
 ├── generator/
 │   ├── importer/
 │   ├── templates/
-│   └── dataset/
+│   ├── dataset/
+│   └── cli.py
 │
 ├── vault/
 │   ├── Dashboard/
+│   ├── Daily Notes/
 │   ├── Striver A2Z/
 │   ├── Pattern Library/
 │   ├── Revision/
+│   ├── Mistakes/
 │   └── Templates/
 │
 └── datasets/
@@ -66,51 +120,9 @@ DSA-OS/
 
 ---
 
-# 🚀 Current Features
-
-- ✅ Overall Progress
-- ✅ Topic Progress
-- ✅ Solved Toggle
-- ✅ Sidebar View
-- ✅ Revision Metadata
-- ✅ Striver Vault Support
-
----
-
-# 🛣 Roadmap
-
-## v0.1
-
-- [x] Sidebar
-- [x] Progress Tracking
-- [x] Solved Workflow
-- [x] Obsidian Integration
-
-## v0.2
-
-- [ ] Pattern Library
-- [ ] Mistake Tracker
-- [ ] Better Dashboard
-- [ ] Search
-
-## v0.3
-
-- [ ] Analytics
-- [ ] Heatmap
-- [ ] Weekly Statistics
-- [ ] Revision Queue
-
-## v1.0
-
-- [ ] Daily Planner
-- [ ] AI Assistance
-- [ ] Plugin Marketplace Release
-
----
-
 # 🏗 Architecture
 
-```
+```text
 Markdown Notes
         │
         ▼
@@ -120,14 +132,21 @@ Markdown Notes
  ProgressService
         │
         ▼
-  DSA Sidebar
+DSA Sidebar
 ```
 
-Solved state is managed through a dedicated toggle service while progress calculations remain read-only.
+### Core Components
+
+- VaultService
+- ProgressService
+- ProblemToggleService
+- RevisionService
+- ProblemStatusService
+- EventService
 
 ---
 
-# 🛠 Development
+# 🚀 Installation
 
 Clone the repository
 
@@ -138,7 +157,7 @@ git clone https://github.com/Pranavgitty/DSA-OS.git
 Install dependencies
 
 ```bash
-cd plugin
+cd DSA-OS/plugin
 npm install
 ```
 
@@ -148,7 +167,7 @@ Build
 npm run build
 ```
 
-Development mode
+Development
 
 ```bash
 npm run dev
@@ -156,18 +175,83 @@ npm run dev
 
 ---
 
+# 🛣 Roadmap
+
+## ✅ v0.1.0-alpha
+
+- [x] Sidebar Dashboard
+- [x] Progress Tracking
+- [x] Topic Progress
+- [x] Solved Workflow
+- [x] Obsidian Integration
+- [x] Revision Metadata
+
+---
+
+## 🚧 v0.2.0
+
+- [ ] Pattern Library
+- [ ] Mistake Tracker
+- [ ] Better Dashboard
+- [ ] Search
+
+---
+
+## 🚧 v0.3.0
+
+- [ ] Analytics Dashboard
+- [ ] GitHub-style Heatmap
+- [ ] Weekly Statistics
+- [ ] Topic Mastery
+
+---
+
+## 🚧 v1.0.0
+
+- [ ] Daily Planner
+- [ ] Revision Queue
+- [ ] AI Assistance
+- [ ] Plugin Marketplace Release
+
+---
+
 # 🤝 Contributing
 
-Contributions are welcome.
+Contributions are welcome!
 
-If you'd like to contribute:
+1. Fork the repository.
+2. Create a feature branch.
 
-1. Fork the repository
-2. Create a feature branch
-3. Submit a Pull Request
+```bash
+git checkout -b feature/my-feature
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "feat: add awesome feature"
+```
+
+4. Push your branch.
+
+```bash
+git push origin feature/my-feature
+```
+
+5. Open a Pull Request.
 
 ---
 
 # 📄 License
 
-MIT License
+Licensed under the **MIT License**.
+
+---
+
+<div align="center">
+
+Made with ❤️ using Obsidian, TypeScript and lots of DSA.
+
+⭐ If you like the project, consider starring the repository!
+
+</div>
