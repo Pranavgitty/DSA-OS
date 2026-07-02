@@ -1,8 +1,12 @@
-<div align="center">
+<p align="center">
+  <img src="assets/banner.png" alt="DSA-OS Banner" width="100%">
+</p>
 
-# 🧠 DSA-OS
+<h1 align="center">🧠 DSA-OS</h1>
 
-### The Competitive Programming Operating System for Obsidian
+<p align="center">
+The Competitive Programming Operating System for Obsidian
+</p>
 
 Build a structured, distraction-free DSA workflow inside your Obsidian vault.
 
@@ -97,6 +101,14 @@ Everything lives in one place:
 
 <p align="center">
   <img src="assets/vault.png" width="300">
+</p>
+
+---
+
+## Toggle
+
+<p align="center">
+  <img src="assets/toggle.png" width="300">
 </p>
 
 ---
