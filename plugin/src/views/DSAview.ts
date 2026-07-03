@@ -3,10 +3,13 @@ import { ItemView, WorkspaceLeaf } from "obsidian";
 import { ProgressService } from "../services/ProgressService";
 import { EventService } from "../services/EventService";
 
+import { Header } from "./components/Header";
+import { OverallProgressCard } from "./components/cards/OverallProgressCard";
+import { TopicProgressCard } from "./components/cards/TopicProgressCard";
+
 export const DSA_VIEW_TYPE = "dsa-os-view";
 
 export class DSAView extends ItemView {
-
 	private readonly progressService = new ProgressService(this.app);
 
 	private readonly refreshHandler = () => {
@@ -55,90 +58,26 @@ export class DSAView extends ItemView {
 
 		container.empty();
 
-		const progress =
+		const root = container.createDiv({
+			cls: "dsa-os",
+		});
+
+		const overallProgress =
 			this.progressService.getOverallProgress();
 
 		const topicProgress =
 			this.progressService.getTopicProgress();
 
-		container.createEl("h2", {
-			text: "🧠 DSA-OS",
-		});
+		Header.render(root);
 
-		container.createEl("hr");
-
-		container.createEl("h3", {
-			text: "📈 Overall Progress",
-		});
-
-		container.createEl("p", {
-			text: `${progress.solved} / ${progress.total} Solved`,
-		});
-
-		container.createEl("p", {
-			text: `${progress.percentage}% Complete`,
-		});
-
-		this.createProgressBar(
-			container,
-			progress.percentage
+		OverallProgressCard.render(
+			root,
+			overallProgress
 		);
 
-		container.createEl("hr");
-
-		container.createEl("h3", {
-			text: "📚 Topic Progress",
-		});
-
-		const sortedTopics =
-			[...topicProgress.entries()].sort(
-				(a, b) => a[0].localeCompare(b[0])
-			);
-
-		for (const [topic, data] of sortedTopics) {
-
-			const percentage =
-				data.total === 0
-					? 0
-					: Math.round(
-							(data.solved / data.total) * 100
-					  );
-
-			container.createEl("h4", {
-				text: topic,
-			});
-
-			this.createProgressBar(
-				container,
-				percentage
-			);
-
-			container.createEl("p", {
-				text: `${data.solved} / ${data.total}`,
-			});
-		}
-	}
-
-	private createProgressBar(
-		parent: HTMLElement,
-		percentage: number
-	): void {
-
-		const bar = parent.createDiv();
-
-		bar.style.height = "8px";
-		bar.style.width = "100%";
-		bar.style.borderRadius = "999px";
-		bar.style.backgroundColor =
-			"var(--background-modifier-border)";
-		bar.style.margin = "6px 0";
-
-		const fill = bar.createDiv();
-
-		fill.style.height = "100%";
-		fill.style.width = `${percentage}%`;
-		fill.style.borderRadius = "999px";
-		fill.style.backgroundColor =
-			"var(--interactive-accent)";
+		TopicProgressCard.render(
+			root,
+			topicProgress
+		);
 	}
 }

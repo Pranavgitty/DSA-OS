@@ -1,8 +1,360 @@
-/*
+/* ==========================================================================
+   DSA-OS Design System
+   ========================================================================== */
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.dsa-os {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	padding: 16px;
+	scroll-behavior: smooth;
+}
 
-If your plugin does not need CSS, delete this file.
+/* ==========================================================================
+   Scrollbar
+   ========================================================================== */
 
-*/
+.dsa-os::-webkit-scrollbar {
+	width: 6px;
+}
+
+.dsa-os::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.dsa-os::-webkit-scrollbar-thumb {
+	background: var(--background-modifier-border);
+	border-radius: 999px;
+}
+
+.dsa-os::-webkit-scrollbar-thumb:hover {
+	background: var(--text-faint);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+.dsa-title {
+	margin: 0;
+	font-size: 1.45rem;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: var(--text-normal);
+}
+
+.dsa-subtitle {
+	margin: 4px 0 0;
+	font-size: 0.78rem;
+	font-weight: 500;
+	color: var(--text-muted);
+	line-height: 1.4;
+}
+
+.dsa-section-title {
+	margin: 0 0 14px;
+	font-size: 0.95rem;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	color: var(--text-normal);
+}
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+.dsa-card {
+	padding: 18px;
+	border-radius: 16px;
+	background: var(--background-secondary);
+	border: 1px solid color-mix(
+		in srgb,
+		var(--background-modifier-border) 45%,
+		transparent
+	);
+
+	transition:
+		background 180ms ease,
+		border-color 180ms ease,
+		transform 180ms ease,
+		box-shadow 180ms ease;
+}
+
+.dsa-card:hover {
+	transform: translateY(-1px);
+
+	border-color: var(--interactive-accent);
+
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dsa-card + .dsa-card {
+	margin-top: 0;
+}
+
+/* ==========================================================================
+   Progress Bar
+   ========================================================================== */
+
+.dsa-progress-bar {
+	width: 100%;
+	height: 6px;
+	margin: 10px 0;
+	border-radius: 999px;
+	background: var(--background-modifier-border);
+	overflow: hidden;
+}
+
+.dsa-progress-fill {
+	height: 100%;
+	width: 0;
+	border-radius: inherit;
+	background: var(--interactive-accent);
+
+	transition: width 300ms ease;
+}
+
+/* ==========================================================================
+   Statistics
+   ========================================================================== */
+
+.dsa-stat-label {
+	font-size: 0.76rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--text-muted);
+}
+
+.dsa-stat-value {
+	margin-top: 6px;
+	font-size: 1.7rem;
+	font-weight: 800;
+	line-height: 1.1;
+	color: var(--text-normal);
+}
+
+/* ==========================================================================
+   Topic Progress
+   ========================================================================== */
+
+.dsa-topic {
+	padding: 8px 0;
+	margin-bottom: 12px;
+
+	border-radius: 10px;
+
+	transition:
+		background 150ms ease,
+		padding 150ms ease;
+}
+
+.dsa-topic:last-child {
+	margin-bottom: 0;
+}
+
+.dsa-topic:hover {
+	background: var(--background-primary-alt);
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.dsa-topic-title {
+	margin-bottom: 6px;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: var(--text-normal);
+}
+
+.dsa-topic-meta {
+	margin-top: 6px;
+	font-size: 0.78rem;
+	font-weight: 500;
+	color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Divider
+   ========================================================================== */
+
+.dsa-divider {
+	height: 1px;
+	margin: 12px 0;
+	background: color-mix(
+		in srgb,
+		var(--background-modifier-border) 65%,
+		transparent
+	);
+}
+
+/* ==========================================================================
+   Focus States
+   ========================================================================== */
+
+.dsa-card:focus-within {
+	border-color: var(--interactive-accent);
+}
+
+/* ==========================================================================
+   Responsive Polish
+   ========================================================================== */
+
+.dsa-card *,
+.dsa-topic * {
+	user-select: none;
+}
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.dsa-header {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding-bottom: 6px;
+}
+
+/* ==========================================================================
+   Overall Progress Layout
+   ========================================================================== */
+
+.dsa-overview {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 14px;
+}
+
+.dsa-overview-item {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.dsa-overview-right {
+	align-items: flex-end;
+	text-align: right;
+}
+
+/* ==========================================================================
+   Topic Layout
+   ========================================================================== */
+
+.dsa-topic-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 6px;
+}
+
+.dsa-topic-title {
+	flex: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dsa-topic-meta {
+	font-size: 0.78rem;
+	font-weight: 600;
+	color: var(--text-muted);
+	white-space: nowrap;
+}
+
+/* ==========================================================================
+   Card Polish
+   ========================================================================== */
+
+.dsa-card {
+	position: relative;
+	overflow: hidden;
+}
+
+.dsa-card::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 2px;
+	background: var(--interactive-accent);
+	opacity: 0.75;
+}
+
+/* ==========================================================================
+   Progress Animation
+   ========================================================================== */
+
+.dsa-progress-fill {
+	background: linear-gradient(
+		90deg,
+		var(--interactive-accent),
+		color-mix(
+			in srgb,
+			var(--interactive-accent) 70%,
+			white
+		)
+	);
+}
+
+/* ==========================================================================
+   Better Hover
+   ========================================================================== */
+
+.dsa-topic {
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.dsa-topic:hover .dsa-topic-title {
+	color: var(--interactive-accent);
+}
+
+/* ==========================================================================
+   Better Numbers
+   ========================================================================== */
+
+.dsa-stat-value {
+	letter-spacing: -0.03em;
+}
+
+/* ==========================================================================
+   Better Section Titles
+   ========================================================================== */
+
+.dsa-section-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 12px;
+	margin-bottom: 14px;
+	border-bottom: 1px solid
+		color-mix(
+			in srgb,
+			var(--background-modifier-border) 60%,
+			transparent
+		);
+}
+
+/* ==========================================================================
+   Mobile / Narrow Sidebar
+   ========================================================================== */
+
+@media (max-width: 340px) {
+	.dsa-overview {
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.dsa-overview-right {
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.dsa-topic-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4px;
+	}
+}
