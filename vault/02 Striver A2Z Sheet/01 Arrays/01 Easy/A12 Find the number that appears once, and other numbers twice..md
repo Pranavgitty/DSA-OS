@@ -51,7 +51,23 @@ nextRevision: 2026-07-03
 ---
 
 ## 🚀 Optimal Approach
+```
+int singleNumber_optimal(vector<int>& nums) {//space complexity iska o(1) hai gng
 
+int xnor=0;
+
+for( int x: nums)
+
+{
+
+xnor= xnor^x;
+
+}
+
+return xnor;
+
+}
+```
 
 
 ---
