@@ -84,7 +84,7 @@ Everything lives in one place:
 ## Dashboard
 
 <p align="center">
-  <img src="assets/dashboard.png" width="900">
+  <img src="assets/Dashboard.png" width="900">
 </p>
 
 ---
@@ -92,7 +92,7 @@ Everything lives in one place:
 ## Sidebar
 
 <p align="center">
-  <img src="assets/sidebar.png" width="300">
+  <img src="assets/Sidebar.png" width="300">
 </p>
 
 ---
@@ -100,7 +100,7 @@ Everything lives in one place:
 ## Vault Structure
 
 <p align="center">
-  <img src="assets/vault.png" width="300">
+  <img src="assets/Vault.png" width="300">
 </p>
 
 ---
@@ -108,7 +108,7 @@ Everything lives in one place:
 ## Toggle
 
 <p align="center">
-  <img src="assets/toggle.png" width="300">
+  <img src="assets/Toggle.png" width="300">
 </p>
 
 ---
