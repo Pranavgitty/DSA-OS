@@ -4,16 +4,12 @@ title: Insertion at the head of Linked List
 difficulty: Easy
 topic: 04 Linked List
 pattern: Learn 1D LinkedList
-
-status: Not Started
-
+status: Solved
 tags:
-
-
 links:
   striver: https://takeuforward.org/linked-list/insert-at-the-head-of-a-linked-list
-  leetcode: 
-  gfg: 
+  leetcode:
+  gfg:
 ---
 
 # Insertion at the head of Linked List

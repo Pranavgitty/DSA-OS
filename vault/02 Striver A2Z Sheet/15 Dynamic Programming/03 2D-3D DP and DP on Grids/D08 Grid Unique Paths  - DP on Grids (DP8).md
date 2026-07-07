@@ -1,6 +1,6 @@
 ---
 id: D08
-title: Grid Unique Paths : DP on Grids (DP8)
+title: DP on Grids (DP8)
 difficulty: Medium
 topic: 15 Dynamic Programming
 pattern: 2D/3D DP and DP on Grids
@@ -12,8 +12,8 @@ tags:
 
 links:
   striver: https://takeuforward.org/data-structure/grid-unique-paths-dp-on-grids-dp8/
-  leetcode: https://leetcode.com/problems/unique-paths/
-  gfg: 
+  leetcode: https://leetcode.com/problems/unique-paths
+  gfg:
 ---
 
 # Grid Unique Paths : DP on Grids (DP8)

@@ -4,16 +4,12 @@ title: Introduction to Singly LinkedList
 difficulty: Easy
 topic: 04 Linked List
 pattern: Learn 1D LinkedList
-
-status: Not Started
-
+status: Solved
 tags:
-
-
 links:
   striver: https://takeuforward.org/linked-list/linked-list-introduction
-  leetcode: 
-  gfg: 
+  leetcode:
+  gfg:
 ---
 
 # Introduction to Singly LinkedList
@@ -23,7 +19,9 @@ links:
 
 - **Striver:** https://takeuforward.org/linked-list/linked-list-introduction
 
+- **GFG:** https://www.geeksforgeeks.org/problems/introduction-to-linked-list/1
 
+- **Code360:** https://www.naukri.com/code360/problems/introduction-to-linked-list_8144737
 
 
 
@@ -56,7 +54,8 @@ links:
 
 ## 💻 My Code
 
-```cpp
+```
+
 
 ```
 
