@@ -1,0 +1,73 @@
+---
+id: G24
+title: Course Schedule I
+difficulty: Hard
+topic: 13 Graphs
+pattern: Topo Sort and Problems
+
+status: Not Started
+
+tags:
+
+
+links:
+  striver: https://takeuforward.org/data-structure/course-schedule-i-and-ii-pre-requisite-tasks-topological-sort-g-24/
+  leetcode: https://leetcode.com/problems/course-schedule/
+  gfg: 
+---
+
+# Course Schedule I
+
+## 🔗 Links
+
+
+- **Striver:** https://takeuforward.org/data-structure/course-schedule-i-and-ii-pre-requisite-tasks-topological-sort-g-24/
+
+
+
+- **LeetCode:** https://leetcode.com/problems/course-schedule/
+
+
+
+
+---
+
+## 📝 Problem Summary
+
+
+
+---
+
+## 💡 Intuition
+
+
+
+---
+
+## 🐢 Brute Force
+
+
+
+---
+
+## 🚀 Optimal Approach
+
+
+
+---
+
+## 💻 My Code
+
+```cpp
+
+```
+
+---
+
+## ❌ Mistakes
+
+
+
+---
+
+## ⭐ Revision
