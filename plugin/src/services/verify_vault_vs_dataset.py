@@ -1,8 +1,8 @@
 from pathlib import Path
 import json
 
-DATASET_DIR = Path("generator/dataset")
-VAULT_DIR = Path("02 Striver A2Z Sheet")
+DATASET_DIR = Path("../../../generator/dataset")
+VAULT_DIR = Path("../../../vault/02 Striver A2Z Sheet")
 
 # ----------------------------
 # LOAD DATASET
